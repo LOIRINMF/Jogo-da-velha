@@ -1,15 +1,10 @@
-// document.body.classList.toggle("")
+// document.body.classList.toggle("") || document.getElementById("btnSortear").disabled = true;
     
-function Opa() {
-    alert("opa bm amigo?")
-}
-
 function bola(){
     let X = document.getElementsByClassName("xis")
 
-    document.button.classList.toggle("outra")
-    
-
+ //   document.button.classList.toggle("outra")
+    document.getElementById("xis").disabled = false
 
         
 }
