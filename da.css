@@ -36,28 +36,21 @@ section {
     height: 50px;
  
 }
-.bola{
+.bola{background-color: black;}
+.xis {background-color: aqua;}
+
+.bola .xis{
     position: absolute;
 
-    background-color: black;
-    color: white;
-
-    width: 50px;
-
-    margin: 10px;
-
-}
-.xis{
-    position: absolute;
-
-    background-color: aqua;
     color: white;
     
     width: 50px;
 
     margin: 10px;
-    
     left: 10%;
+
+    border-radius: 20px;
+    box-shadow: 2px 5px 2px red;
 
 }
 
