@@ -1,14 +1,13 @@
 // document.body.classList.toggle("") || document.getElementById("btnSortear").disabled = true;
     
 function bola(){
-    let X = document.getElementsByClassName("xis")
 
  //   document.button.classList.toggle("outra")
-    document.getElementById("xis").disabled = false
+    document.getElementById("xis").disabled = true
 
         
 }
 function xis(){
-    let bola = document.getElementsByClassName("bola")
+    document.getElementById("bola").disabled = true
 
 }
