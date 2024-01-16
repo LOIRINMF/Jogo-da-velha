@@ -87,6 +87,10 @@ section {
 
 }
 
+.box:hover{
+    background-color: rgba(194, 23, 23, 0.699);
+}
+
 bOUx {
     position: absolute;
     top: 50%;
