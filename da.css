@@ -69,7 +69,7 @@ section {
  
 }
 
-.bola{
+.btBola{
     position: absolute;
 
     background-color: rgb(0, 0, 0);
@@ -83,7 +83,7 @@ section {
     box-shadow: 2px 3px 2px red;
 
 }
-.xis{
+.btXis{
     position: absolute;
 
     background-color: rgb(0, 0, 0);
@@ -97,10 +97,10 @@ section {
     border-radius: 20px;
     box-shadow: 2px 3px 2px red;
 }
-.bola:hover {
+.btBola:hover {
     color: lime;
 }
-.xis:hover{
+.btXis:hover{
     color: lime;
 }
 
@@ -121,7 +121,11 @@ section {
     background-color: rgba(194, 23, 23, 0.699);
 }
 
-bOUx {
+.certo:hover{
+    background-color: rgba(0, 255, 0, 0.637);
+}
+
+.bOUx {
     position: absolute;
     top: 50%;
     left: 50%;
