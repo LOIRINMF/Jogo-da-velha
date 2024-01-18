@@ -24,6 +24,7 @@ function bolaORxis() {
 
         erro.innerHTML = "Selecione com qual letra você ira começa primeiro!!"
     } else {
+        let erro = document.getElementById("opa")
         erro.innerHTML = "Ok"
     }
 }
