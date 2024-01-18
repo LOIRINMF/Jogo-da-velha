@@ -27,6 +27,15 @@ h1 {
     color: rgba(225, 240, 13, 0.829);
 }
 
+h3 {
+    text-align: center;
+
+    color: red;
+    
+    size: 2em;
+    padding: 10px;
+}
+
 section {
     display: flex;
 
@@ -70,7 +79,10 @@ section {
     border-radius: 20px;
     box-shadow: 2px 3px 2px red;
 }
-.bola .xis:hover{
+.bola:hover {
+    color: lime;
+}
+.xis:hover{
     color: lime;
 }
 
@@ -119,7 +131,7 @@ bOUx {
     position: relative;
     left: 30%;
 
-    max-width: 550px;
+    max-width: 300px;
     height: 10px;
 
     background-color: red;

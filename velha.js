@@ -4,7 +4,7 @@
 let testeB = Number(0)
 let testeX = Number(0)
 
-let opa = document.getElementById("")
+// let opa = document.getElementById("")
 
 function bola(){
     document.getElementById("xis").disabled = true
@@ -18,7 +18,12 @@ function xis(){
 }
 
 function bolaORxis() {
-    if (testeB || testeX == 0) {
+    if (testeB == 0 && testeX == 0) {
 
+        let erro = document.getElementById("opa")
+
+        erro.innerHTML = "Selecione com qual letra você ira começa primeiro!!"
+    } else {
+        erro.innerHTML = "Ok"
     }
 }
