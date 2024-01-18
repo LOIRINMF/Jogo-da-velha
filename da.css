@@ -15,8 +15,26 @@ body {
     height: 100%;
 }
 
-.outra {
-    background-color: red;
+.outraX {
+    position: absolute;
+
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+    
+    width: 80px;
+
+    margin: 10px;
+}
+
+.outraB {
+    position: absolute;
+
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+    
+    width: 80px;
+
+    margin: 10px;
 }
 
 h1 {
