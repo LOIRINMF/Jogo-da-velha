@@ -79,5 +79,11 @@ function bolaORxis() {
     } else {
         let erro = document.getElementById("opa")
         erro.innerHTML = "Ok"
+
+        /* Primero pega o id
+        fazer a separaçao de bola ou xis 
+        como o revesamento. na tela..
+        */
+
     }
 }
