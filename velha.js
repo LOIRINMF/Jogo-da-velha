@@ -21,23 +21,28 @@ function bola() {
     document.getElementById("bola").disabled = true
     testeB = 1
 
-    const novoX = document.querySelector('.btXis');
-    novoX.classList.toggle('outraX');
-
+    
+// Deixar as div box verde.
     verde()
+// Desabilita os button.
+    nbutton()
 }
-
 
 function xis() {
     document.getElementById("bola").disabled = true
     document.querySelector('.btXis').disabled = true
     testeX = 1
 
+    verde()
+    nbutton()
+}
+
+function nbutton(){
+    const novoX = document.querySelector('.btXis');
+    novoX.classList.toggle('outraX');
+
     const novoB = document.querySelector('.btBola');
     novoB.classList.add('outraB');
-
-    // Deixar as div box verde.
-    verde()
 }
 
 function verde() {
@@ -82,12 +87,15 @@ function bolaORxis(a) {
         // Primero pega o id  ||CERTO||
         let escolha = a
 
+        let erro = document.getElementById("opa")
+        erro.innerHTML = ""
+
         // fazer a separaçao de bola ou xis ||CERTO||
         if (testeB == 1) {
-
             let H = document.querySelector('#bOx' + a)
 
             H.innerHTML = "O"
+
             testeB = 0
             testeX = 1
         } else {
@@ -97,7 +105,5 @@ function bolaORxis(a) {
             testeX = 0
             testeB = 1
         }
-
-
     }
 }

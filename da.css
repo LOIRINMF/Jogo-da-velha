@@ -9,32 +9,10 @@
 
 
 body {
-    background-image: linear-gradient(190deg, rgb(97, 192, 9) 30%, rgba(25, 181, 219, 0.664));
+    background-image: linear-gradient(190deg, rgba(145, 6, 158, 0.842) 30%, rgba(16, 43, 192, 0.664));
 
     font-family: "Roboto", sans-serif;
     height: 100%;
-}
-
-.outraX {
-    position: absolute;
-
-    background-color: rgb(255, 0, 0);
-    color: rgb(200, 245, 0);
-    
-    width: 80px;
-
-    margin: 10px;
-}
-
-.outraB {
-    position: absolute;
-
-    background-color: rgb(255, 0, 0);
-    color: rgb(200, 245, 0);
-    
-    width: 80px;
-
-    margin: 10px;
 }
 
 h1 {
@@ -42,7 +20,7 @@ h1 {
 
     padding: 13px;
 
-    color: rgba(225, 240, 13, 0.829);
+    color: rgba(240, 142, 13, 0.973);
 }
 
 h3 {
@@ -69,40 +47,53 @@ section {
  
 }
 
+/*Posição dos button*/
 .btBola{
-    position: absolute;
-
-    background-color: rgb(0, 0, 0);
-    color: white;
-    
-    width: 80px;
-
-    margin: 10px;
-
-    border-radius: 20px;
-    box-shadow: 2px 3px 2px red;
-
+    left: 10%;
 }
 .btXis{
-    position: absolute;
+    left: 81%;
+}
 
-    background-color: rgb(0, 0, 0);
-    color: white;
+button {
+    position: absolute;
+    transition-duration: 0.5s;
+
+    background-color: rgba(8, 119, 223, 0.63);
+    color: black;
     
-    width: 80px;
+    width: 100px;
 
     margin: 10px;
-    left: 20%;
-
+    
     border-radius: 20px;
-    box-shadow: 2px 3px 2px red;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.363);
+    border: 2px solid #000000;
 }
+
 .btBola:hover {
-    color: lime;
+    background-color: rgba(0, 0, 0, 0.856);
+    color: rgb(255, 255, 255);
 }
+
 .btXis:hover{
-    color: lime;
+    background-color: rgba(0, 0, 0, 0.856);
+    color: rgb(255, 255, 255);
 }
+.outraX {
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+}
+
+.outraB {
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 
 .box {
     display: inline-block;
@@ -111,14 +102,16 @@ section {
     width: 150px;
     height: 150px;
 
-    background-color: blue;
+    margin: 1px;
+
+    background-color: rgba(0, 0, 0, 0.336);
 
     text-align: center;
 
 }
 
 .box:hover{
-    background-color: rgba(194, 23, 23, 0.699);
+    background-color: rgba(187, 17, 17, 0.699);
 }
 
 .certo:hover{
@@ -134,7 +127,7 @@ section {
 
     text-align: center;
 
-    font-size: 35px;
+    font-size: 40px;
 
 }
 
