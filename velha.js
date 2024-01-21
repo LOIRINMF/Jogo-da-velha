@@ -18,7 +18,7 @@ let testeX = Number(0)
 // funçoes que qando chamadas liberam um parametro(1) de aprovação.
 function bola() {
     document.querySelector('.btXis').disabled = true
-
+    document.getElementById("bola").disabled = true
     testeB = 1
 
     const novoX = document.querySelector('.btXis');
@@ -26,9 +26,11 @@ function bola() {
 
     verde()
 }
+
+
 function xis() {
     document.getElementById("bola").disabled = true
-
+    document.querySelector('.btXis').disabled = true
     testeX = 1
 
     const novoB = document.querySelector('.btBola');
@@ -70,20 +72,32 @@ function verde() {
 /* função que verifica os parametros. 
  (agora e fazer ela chama outra função para continuar o jogo) */
 
-function bolaORxis() {
+function bolaORxis(a) {
     if (testeB == 0 && testeX == 0) {
 
         let erro = document.getElementById("opa")
 
         erro.innerHTML = "Selecione com qual letra você ira começa primeiro!!"
     } else {
-        let erro = document.getElementById("opa")
-        erro.innerHTML = "Ok"
+        // Primero pega o id  ||CERTO||
+        let escolha = a
 
-        /* Primero pega o id
-        fazer a separaçao de bola ou xis 
-        como o revesamento. na tela..
-        */
+        // fazer a separaçao de bola ou xis ||CERTO||
+        if (testeB == 1) {
+
+            let H = document.querySelector('#bOx' + a)
+
+            H.innerHTML = "O"
+            testeB = 0
+            testeX = 1
+        } else {
+            let H = document.querySelector('#bOx' + a)
+
+            H.innerHTML = "X"
+            testeX = 0
+            testeB = 1
+        }
+
 
     }
 }
