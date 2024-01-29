@@ -12,23 +12,7 @@ body {
     background-image: linear-gradient(190deg, rgba(145, 6, 158, 0.842) 30%, rgba(16, 43, 192, 0.664));
 
     font-family: "Roboto", sans-serif;
-}
 
-h1 {
-    text-align: center;
-
-    padding: 13px;
-
-    color: rgba(240, 142, 13, 0.973);
-}
-
-h3 {
-    text-align: center;
-
-    color: red;
-    
-    size: 2em;
-    padding: 10px;
 }
 
 .GPT {
@@ -47,20 +31,52 @@ h3 {
 
 }
 
-.caixas{
+.caixas {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     width: 100px;
     height: 100px;
-    
+
     border: 1px solid #ccc;
-    
+
     font-size: 24px;
-    
+
     cursor: pointer;
-    }
+}
+
+/*EM  CIMA FOI O GPT QUE FEZ!*/
+
+h1 {
+    text-align: center;
+
+    padding: 13px;
+
+    color: rgba(240, 142, 13, 0.973);
+}
+
+h3 {
+    text-align: center;
+
+    color: red;
+
+    size: 2em;
+    padding: 10px;
+}
+
+.bOUx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: -25px 0 0 -11px;
+
+    text-align: center;
+
+    font-size: 40px;
+
+}
 
 section {
     display: flex;
@@ -68,63 +84,6 @@ section {
     align-items: center;
     justify-content: center;
 }
-
-.seletor{
-    position: relative;
-
-    width: 100%;
-    height: 50px;
- 
-}
-
-/*Posição dos button*/
-.btBola{
-    left: 10%;
-}
-.btXis{
-    left: 81%;
-}
-
-button {
-    position: absolute;
-    transition-duration: 0.5s;
-
-    background-color: rgba(8, 119, 223, 0.63);
-    color: black;
-    
-    width: 100px;
-
-    margin: 10px;
-    
-    border-radius: 20px;
-    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.363);
-    border: 2px solid #000000;
-}
-
-.btBola:hover {
-    background-color: rgba(0, 0, 0, 0.856);
-    color: rgb(255, 255, 255);
-}
-
-.btXis:hover{
-    background-color: rgba(0, 0, 0, 0.856);
-    color: rgb(255, 255, 255);
-}
-
-.outraX {
-    background-color: rgb(255, 0, 0);
-    color: rgb(200, 245, 0);
-}
-
-.outraB {
-    background-color: rgb(255, 0, 0);
-    color: rgb(200, 245, 0);
-}
-
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
 
 .box {
     display: inline-block;
@@ -141,23 +100,65 @@ button {
 
 }
 
-.box:hover{
+.box:hover {
     background-color: rgba(187, 17, 17, 0.699);
 }
 
-.certo:hover{
+.certo:hover {
     background-color: rgba(0, 255, 0, 0.637);
 }
 
-.bOUx {
+.outraX {
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+}
+
+.outraB {
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* BUTTON */
+
+.seletor {
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+
+}
+
+button {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    transition-duration: 0.5s;
 
-    margin: -25px 0 0 -11px;
+    background-color: rgba(8, 119, 223, 0.63);
+    color: black;
 
-    text-align: center;
+    width: 100px;
 
-    font-size: 40px;
+    margin: 10px;
 
+    border-radius: 20px;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.363);
+    border: 2px solid #000000;
+}
+
+.btBola {
+    left: 10%;
+}
+
+.btXis {
+    left: 81%;
+}
+
+.btBola:hover,
+.btXis:hover {
+    background-color: rgba(0, 0, 0, 0.856);
+    color: rgb(255, 255, 255);
 }
