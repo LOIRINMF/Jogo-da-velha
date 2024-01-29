@@ -16,15 +16,17 @@ let testeX = Number(0)
 
 
 // funçoes que qando chamadas liberam um parametro(1) de aprovação.
+
+// PENSEI EM UMA FORMA DE RESUMIR A LILHA 19 A 40 PASANDO UM PARAMETRO PRA FUNCION
 function bola() {
     document.querySelector('.btXis').disabled = true
     document.getElementById("bola").disabled = true
     testeB = 1
 
-    
-// Deixar as div box verde.
+
+    // Deixar as div box verde.
     verde()
-// Desabilita os button.
+    // Desabilita os button.
     nbutton()
 }
 
@@ -36,8 +38,8 @@ function xis() {
     verde()
     nbutton()
 }
-
-function nbutton(){
+// ATE AQUI
+function nbutton() {
     const novoX = document.querySelector('.btXis');
     novoX.classList.toggle('outraX');
 
@@ -46,32 +48,12 @@ function nbutton(){
 }
 
 function verde() {
-    let c1 = document.querySelector('#l1')
-    c1.classList.add('certo')
+    let c1 = document.querySelectorAll('.box');
 
-    let c2 = document.querySelector('#l2')
-    c2.classList.add('certo')
-
-    let c3 = document.querySelector('#l3')
-    c3.classList.add('certo')
-
-    let c4 = document.querySelector('#l4')
-    c4.classList.add('certo')
-
-    let c5 = document.querySelector('#l5')
-    c5.classList.add('certo')
-
-    let c6 = document.querySelector('#l6')
-    c6.classList.add('certo')
-
-    let c7 = document.querySelector('#l7')
-    c7.classList.add('certo')
-
-    let c8 = document.querySelector('#l8')
-    c8.classList.add('certo')
-
-    let c9 = document.querySelector('#l9')
-    c9.classList.add('certo')
+    c1.forEach(element => {
+        element.classList.add('certo');
+        }
+    );
 }
 
 /* função que verifica os parametros. 
@@ -84,35 +66,36 @@ function bolaORxis(a) {
 
         erro.innerHTML = "Selecione com qual letra você ira começa primeiro!!"
     } else {
-        // Primero pega o id  ||CERTO||
-        let escolha = a
-
+        // Se tive algo escrito aqui ele apaga.
         let erro = document.getElementById("opa")
         erro.innerHTML = ""
 
+        //Pegando o ID da box e colocando em uma (var)
+        const H = document.querySelector('#bOx' + a)
+        const L = document.querySelector('#l' + a)
+
         // fazer a separaçao de bola ou xis ||CERTO||
         if (testeB == 1) {
-            let H = document.querySelector('#bOx' + a)
-
             H.innerHTML = "O"
 
             testeB = 0
             testeX = 1
         } else {
-            let H = document.querySelector('#bOx' + a)
-
             H.innerHTML = "X"
             testeX = 0
             testeB = 1
         }
+
+        L.onclick = null;    
     }
 }
 
+// funcion do chatGPT (O cara e bom!!) 
 let jogadorAtual = 'X';
 
-        function jogar(element) {
-            if (element.innerHTML === '') {
-                element.innerHTML = jogadorAtual;
-                jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
-            }
-        }
+function jogar(element) {
+    if (element.innerHTML === '') {
+        element.innerHTML = jogadorAtual;
+        jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
+    }
+}
