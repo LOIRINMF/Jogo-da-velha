@@ -99,3 +99,57 @@ function jogar(element) {
         jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
     }
 }
+
+// codigo de ferificaçao do GPT
+/*
+let tabuleiro = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+];
+
+function verificarVencedor() {
+    // Verificar linhas
+    for (let i = 0; i < 3; i++) {
+        if (tabuleiro[i][0] !== "" && tabuleiro[i][0] === tabuleiro[i][1] && tabuleiro[i][1] === tabuleiro[i][2]) {
+            return tabuleiro[i][0];
+        }
+    }
+
+    // Verificar colunas
+    for (let j = 0; j < 3; j++) {
+        if (tabuleiro[0][j] !== "" && tabuleiro[0][j] === tabuleiro[1][j] && tabuleiro[1][j] === tabuleiro[2][j]) {
+            return tabuleiro[0][j];
+        }
+    }
+
+    // Verificar diagonais
+    if (tabuleiro[0][0] !== "" && tabuleiro[0][0] === tabuleiro[1][1] && tabuleiro[1][1] === tabuleiro[2][2]) {
+        return tabuleiro[0][0];
+    }
+
+    if (tabuleiro[0][2] !== "" && tabuleiro[0][2] === tabuleiro[1][1] && tabuleiro[1][1] === tabuleiro[2][0]) {
+        return tabuleiro[0][2];
+    }
+
+    return null;  // Nenhum vencedor
+}
+
+// Exemplo de uso após cada jogada
+function jogar(a) {
+    // ... (seu código existente para jogar)
+
+    // Atualizar a matriz do tabuleiro com a jogada
+    // Supondo que "a" seja um índice válido entre 1 e 9
+    let linha = Math.floor((a - 1) / 3);
+    let coluna = (a - 1) % 3;
+    tabuleiro[linha][coluna] = testeB === 1 ? "O" : "X";
+
+    // Verificar se há um vencedor após a jogada
+    let vencedor = verificarVencedor();
+    if (vencedor !== null) {
+        alert("Jogador " + vencedor + " venceu!");
+        // Lógica para reiniciar o jogo ou qualquer outra ação desejada
+    }
+}
+*/
