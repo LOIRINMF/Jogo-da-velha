@@ -107,3 +107,12 @@ function bolaORxis(a) {
         }
     }
 }
+
+let jogadorAtual = 'X';
+
+        function jogar(element) {
+            if (element.innerHTML === '') {
+                element.innerHTML = jogadorAtual;
+                jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
+            }
+        }
