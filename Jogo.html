@@ -12,89 +12,99 @@
 </head>
 
 <body>
-
     <header>
-        <h1>Jogo da velha</h1>
+        <div class="loading-container">
+            <h1>LOADING</h1>
+        </div>
+
+        <h1 class="titulor">Jogo da velha</h1>
         <h3 id="opa"></h3>
     </header>
-    
-<main>
-    <section class="jogo-da-velha">
-        
-        <div class="box" id="l1" onclick="bolaORxis(1)">
-            <h2 class="bOUx" id="bOx1"> </h2>
-        </div>
 
-        
-        <div class="box" id="l2" onclick="bolaORxis(2)">
-            <h2 class="bOUx" id="bOx2"> </h2>
-        </div>
+    <main>
+        <section class="jogo-da-velha">
 
-        
-        <div class="box" id="l3" onclick="bolaORxis(3)">
-            <h2 class="bOUx" id="bOx3"> </h2>
-        </div>
+            <div class="box" id="l1" onclick="bolaORxis(1)">
+                <h2 class="bOUx" id="bOx1"> </h2>
+            </div>
 
-    </section>
 
-    <section class="jogo-da-velha">
-        
-        <div class="box" id="l4" onclick="bolaORxis(4)">
-            <h2 class="bOUx" id="bOx4"> </h2>
-        </div>
+            <div class="box" id="l2" onclick="bolaORxis(2)">
+                <h2 class="bOUx" id="bOx2"> </h2>
+            </div>
 
-        
-        <div class="box" id="l5" onclick="bolaORxis(5)">
-            <h2 class="bOUx" id="bOx5"> </h2>
-        </div>
 
-        
-        <div class="box" id="l6" onclick="bolaORxis(6)">
-            <h2 class="bOUx" id="bOx6"> </h2>
-        </div>
+            <div class="box" id="l3" onclick="bolaORxis(3)">
+                <h2 class="bOUx" id="bOx3"> </h2>
+            </div>
 
-    </section>
+        </section>
 
-    <section class="jogo-da-velha">
-        
-        <div class="box" id="l7" onclick="bolaORxis(7)">
-            <h2 class="bOUx" id="bOx7"> </h2>
-        </div>
+        <section class="jogo-da-velha">
 
-        
-        <div class="box" id="l8" onclick="bolaORxis(8)">
-            <h2 class="bOUx" id="bOx8"> </h2>
-        </div>
+            <div class="box" id="l4" onclick="bolaORxis(4)">
+                <h2 class="bOUx" id="bOx4"> </h2>
+            </div>
 
-        
-        <div class="box" id="l9" onclick="bolaORxis(9)">
-            <h2 class="bOUx" id="bOx9"> </h2>
-        </div>
-        
-    </section>
 
-</main>
+            <div class="box" id="l5" onclick="bolaORxis(5)">
+                <h2 class="bOUx" id="bOx5"> </h2>
+            </div>
 
-<div class="seletor">
-    <button class="btBola" onclick="bola()" id="bola">BOLA</button>
-    <button class="btXis" onclick="xis()" id="xis">XIS</button>
-</div>
 
-<div class="GPT">
-    <div class="jogo-do-GPT">
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
-        <div class="caixas" onclick="jogar(this)"></div>
+            <div class="box" id="l6" onclick="bolaORxis(6)">
+                <h2 class="bOUx" id="bOx6"> </h2>
+            </div>
+
+        </section>
+
+        <section class="jogo-da-velha">
+
+            <div class="box" id="l7" onclick="bolaORxis(7)">
+                <h2 class="bOUx" id="bOx7"> </h2>
+            </div>
+
+
+            <div class="box" id="l8" onclick="bolaORxis(8)">
+                <h2 class="bOUx" id="bOx8"> </h2>
+            </div>
+
+
+            <div class="box" id="l9" onclick="bolaORxis(9)">
+                <h2 class="bOUx" id="bOx9"> </h2>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="seletor">
+        <button class="btBola" onclick="bola()" id="bola">BOLA</button>
+        <button class="btXis" onclick="xis()" id="xis">XIS</button>
     </div>
-</div>
 
+  
 
+    <script>
+        // Simulando o restante do código sendo exibido após 7 segundos
+        setTimeout(function() {
+          document.querySelector('.loading-container').style.display = 'none';
+          // Coloque o restante do seu código aqui
+          <div class="GPT">
+        <div class="jogo-do-GPT">
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+            <div class="caixas" onclick="jogar(this)"></div>
+        </div>
+    </div>
+        }, 5000);
+    </script>
     <!-- fim do codigo chamada do JS-->
     <script src="./velha.js"></script>
 

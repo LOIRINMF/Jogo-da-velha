@@ -48,7 +48,7 @@ body {
 
 /*EM  CIMA FOI O GPT QUE FEZ!*/
 
-h1 {
+.titulor {
     text-align: center;
 
     padding: 13px;
@@ -162,3 +162,31 @@ button {
     background-color: rgba(0, 0, 0, 0.856);
     color: rgb(255, 255, 255);
 }
+
+@keyframes colorChange {
+    0% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: -100% 0%;
+    }
+  }
+
+  .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 200px;
+
+    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
+    color: white;
+    background-size: 200% 100%;
+    
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    
+    text-align: center;
+    
+    animation: colorChange 3s ease infinite;
+  }
