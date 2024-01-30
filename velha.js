@@ -52,7 +52,7 @@ function verde() {
 
     c1.forEach(element => {
         element.classList.add('certo');
-        }
+    }
     );
 }
 
@@ -86,7 +86,7 @@ function bolaORxis(a) {
             testeB = 1
         }
 
-        L.onclick = null;    
+        L.onclick = null;
     }
 }
 
@@ -99,6 +99,29 @@ function jogar(element) {
         jogadorAtual = jogadorAtual === 'X' ? 'O' : 'X';
     }
 }
+
+//Animação
+// Simulando o restante do código sendo exibido após 7 segundos
+setTimeout(function () {
+    let loadingContainer = document.querySelector('.loading-container');
+    let GPT = document.querySelector('.GPT');
+
+    // Remove a animação
+    loadingContainer.style.animation = 'none';
+
+    // Substitui o conteúdo HTML
+    GPT.innerHTML = '<div class="jogo-do-GPT">' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '<div class="caixas" onclick="jogar(this)"></div>' +
+        '</div>';
+}, 3000);
 
 // codigo de ferificaçao do GPT
 /*
