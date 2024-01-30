@@ -103,13 +103,11 @@ function jogar(element) {
 //Animação
 // Simulando o restante do código sendo exibido após 7 segundos
 setTimeout(function () {
-    let loadingContainer = document.querySelector('.loading-container');
-    let GPT = document.querySelector('.GPT');
-
     // Remove a animação
-    loadingContainer.style.animation = 'none';
-
-    // Substitui o conteúdo HTML
+    document.querySelector('.loading-container').style.display = 'none';
+    
+    let GPT = document.querySelector('.GPT');
+    
     GPT.innerHTML = '<div class="jogo-do-GPT">' +
         '<div class="caixas" onclick="jogar(this)"></div>' +
         '<div class="caixas" onclick="jogar(this)"></div>' +
