@@ -21,5 +21,6 @@ function makeMove(move) {
   ws.send(message);
 }
 
+
 // Exemplo de uso
 makeMove(4); // O jogador faz uma jogada na posição 4 do tabuleiro
