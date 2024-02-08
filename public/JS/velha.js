@@ -100,8 +100,57 @@ function jogar(element) {
     }
 }
 
+
+// codigo de ferificaçao do GPT
+let tabuleiroV = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+];
+
+function verificarVencedor() {
+    // Verificar linhas
+    for (let i = 0; i < 3; i++) {
+        if (tabuleiroV[i][0] !== "" && tabuleiroV[i][0] === tabuleiroV[i][1] && tabuleiroV[i][1] === tabuleiroV[i][2]) {
+            return tabuleiroV[i][0];
+        }
+    }
+
+    // Verificar colunas
+    for (let j = 0; j < 3; j++) {
+        if (tabuleiroV[0][j] !== "" && tabuleiroV[0][j] === tabuleiroV[1][j] && tabuleiroV[1][j] === tabuleiroV[2][j]) {
+            return tabuleiroV[0][j];
+        }
+    }
+
+    // Verificar diagonais
+    if (tabuleiroV[0][0] !== "" && tabuleiroV[0][0] === tabuleiroV[1][1] && tabuleiroV[1][1] === tabuleiroV[2][2]) {
+        return tabuleiroV[0][0];
+    }
+
+    if (tabuleiroV[0][2] !== "" && tabuleiroV[0][2] === tabuleiroV[1][1] && tabuleiroV[1][1] === tabuleiroV[2][0]) {
+        return tabuleiroV[0][2];
+    }
+
+    return null;  // Nenhum vencedor
+}
+
+// Atualizar a matriz do tabuleiro com a jogada
+    // Supondo que "a" seja um índice válido entre 1 e 9
+    let linha = Math.floor((a - 1) / 3);
+    let coluna = (a - 1) % 3;
+    tabuleiroV[linha][coluna] = testeB === 1 ? "O" : "X";
+
+    // Verificar se há um vencedor após a jogada
+    let vencedor = verificarVencedor();
+    if (vencedor !== null) {
+        alert("Jogador " + vencedor + " venceu!");
+        // Lógica para reiniciar o jogo ou qualquer outra ação desejada
+    }
+
 //Animação
 // Simulando o restante do código sendo exibido após 7 segundos
+/*
 setTimeout(function () {
     // Remove a animação
     document.querySelector('.loading-container').style.display = 'none';
@@ -120,57 +169,4 @@ setTimeout(function () {
         '<div class="caixas" onclick="jogar(this)"></div>' +
         '</div>';
 }, 3000);
-
-// codigo de ferificaçao do GPT
-/*
-let tabuleiro = [
-    ["", "", ""],
-    ["", "", ""],
-    ["", "", ""]
-];
-
-function verificarVencedor() {
-    // Verificar linhas
-    for (let i = 0; i < 3; i++) {
-        if (tabuleiro[i][0] !== "" && tabuleiro[i][0] === tabuleiro[i][1] && tabuleiro[i][1] === tabuleiro[i][2]) {
-            return tabuleiro[i][0];
-        }
-    }
-
-    // Verificar colunas
-    for (let j = 0; j < 3; j++) {
-        if (tabuleiro[0][j] !== "" && tabuleiro[0][j] === tabuleiro[1][j] && tabuleiro[1][j] === tabuleiro[2][j]) {
-            return tabuleiro[0][j];
-        }
-    }
-
-    // Verificar diagonais
-    if (tabuleiro[0][0] !== "" && tabuleiro[0][0] === tabuleiro[1][1] && tabuleiro[1][1] === tabuleiro[2][2]) {
-        return tabuleiro[0][0];
-    }
-
-    if (tabuleiro[0][2] !== "" && tabuleiro[0][2] === tabuleiro[1][1] && tabuleiro[1][1] === tabuleiro[2][0]) {
-        return tabuleiro[0][2];
-    }
-
-    return null;  // Nenhum vencedor
-}
-
-// Exemplo de uso após cada jogada
-function jogar(a) {
-    // ... (seu código existente para jogar)
-
-    // Atualizar a matriz do tabuleiro com a jogada
-    // Supondo que "a" seja um índice válido entre 1 e 9
-    let linha = Math.floor((a - 1) / 3);
-    let coluna = (a - 1) % 3;
-    tabuleiro[linha][coluna] = testeB === 1 ? "O" : "X";
-
-    // Verificar se há um vencedor após a jogada
-    let vencedor = verificarVencedor();
-    if (vencedor !== null) {
-        alert("Jogador " + vencedor + " venceu!");
-        // Lógica para reiniciar o jogo ou qualquer outra ação desejada
-    }
-}
-*/
+ */
