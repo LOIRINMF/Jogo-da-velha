@@ -10,6 +10,8 @@
 let testeB = Number(0)
 let testeX = Number(0)
 
+let sistema = document.getElementById("sistem")
+
 // funçoes que quando chamadas liberam um parametro(1) de aprovação.
 // PENSEI EM UMA FORMA DE RESUMIR A LILHA 15 A 35 PASANDO UM PARAMETRO PRA FUNCION
 function bola() {
@@ -54,13 +56,10 @@ function verde() {
  (agora e fazer ela chama outra função para continuar o jogo) */
 
 function bolaORxis(a) {
-    let erro = document.getElementById("opa")
     if (testeB == 0 && testeX == 0) {
-        erro.innerHTML = "Selecione com qual letra você ira começa X ou BOLA!!"
+        sistema.innerHTML = "Selecione com qual letra você ira começa X ou BOLA!!"
 
     } else {
-        // Se tive algo escrito aqui ele apaga.
-        erro.innerHTML = ""
 
         //Pegando o ID da box e colocando em uma (var)
         const H = document.querySelector('#bOx' + a)
@@ -70,10 +69,15 @@ function bolaORxis(a) {
         if (testeB == 1) {
             H.innerHTML = "O"
 
+            sistema.innerHTML = "vez do X"
+            
             testeB = 0
             testeX = 1
         } else {
             H.innerHTML = "X"
+            
+            sistema.innerHTML = "vez do O"
+
             testeX = 0
             testeB = 1
         }
