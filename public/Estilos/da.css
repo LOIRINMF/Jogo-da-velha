@@ -78,7 +78,7 @@ h3 {
 
 }
 
-section {
+.jogo-da-velha {
     display: flex;
 
     align-items: center;
