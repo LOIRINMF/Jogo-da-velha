@@ -1,0 +1,19 @@
+.confete {
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    position: absolute;
+    animation: confeteQueda linear infinite;
+    transform-origin: 50% 50%;
+    opacity: 0;
+}
+@keyframes confeteQueda {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
+    }
+}
