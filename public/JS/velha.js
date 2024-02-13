@@ -58,14 +58,14 @@ function verde() {
 function bolaORxis(a) {
     if (testeB == 0 && testeX == 0) {
         sistema.innerHTML = "Selecione com qual letra você ira começa X ou BOLA!!"
-
+console.log('if')
     } else {
 
         //Pegando o ID da box e colocando em uma (var)
         const H = document.querySelector('#bOx' + a)
         const L = document.querySelector('#l' + a)
         let S = ''
-
+console.log('else')
         // fazer a separaçao de bola ou xis ||CERTO||
         if (testeB == 1) {
             H.innerHTML = "O"
@@ -124,34 +124,45 @@ function verificarVencedor() {
 function jogar(a) {
     let linha = Math.floor((a - 1) / 3);
     let coluna = (a - 1) % 3;
-
     tabuleiroV[linha][coluna] = testeB === 1 ? "X" : "O";
-
+    
     // Verificar se há um vencedor após a jogada
     let vencedor = verificarVencedor();
+    console.log('teste1000')
     if (vencedor !== null) {
-
-        alert("Jogador " + vencedor + " venceu!");
-
-        // Lógica para reiniciar o jogo.
-        tabuleiroV = [
-            ["", "", ""],
-            ["", "", ""],
-            ["", "", ""]
-        ];
-
-        function limp() {
-            for (let L = 1; L < 10; L++) {
-
-                let Limpar = document.querySelector('#bOx' + L);
-                let recomeca = document.querySelector('#l' + L);
-
-                Limpar.innerHTML = ''
-                recomeca.onclick = true;
-            }
-        }
+        
+        sistema.innerHTML = ("Parabens Jogador " + vencedor + " você venceu!");
+        
+        // Lógica para reiniciar o jogo.   
         limp()
     }
+}
+function limp() {
+
+    for (let L = 1; L < 10; L++) {
+
+        let Limpar = document.querySelector('#bOx' + L);
+
+        Limpar.innerHTML = ""
+
+    }
+    
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            tabuleiroV[i][j] = '';
+        }
+    }
+
+    let boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+        box.onclick = () => bolaORxis(parseInt(box.id.substr(1)));
+    });
+
+    testeB = Number(0)
+    testeX = Number(0)
+
+    document.querySelector('.btXis').disabled = false
+    document.getElementById("bola").disabled = false
 }
 
 // Simulando o restante do código sendo exibido após 7 segundos
