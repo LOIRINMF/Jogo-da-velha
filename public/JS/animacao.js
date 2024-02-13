@@ -107,16 +107,3 @@ window.requestAnimFrame = (function(callback) {
   }
 
   //_______________
-
-  function criarConfete() {
-    const confete = document.createElement("div");
-    confete.classList.add("confete");
-    confete.style.left = Math.random() * window.innerWidth + "px";
-    confete.style.animationDuration = Math.random() * 3 + 2 + "s";
-    document.body.appendChild(confete);
-    setTimeout(() => {
-        confete.remove();
-    }, 7000); // Ajuste a duração conforme necessário
-}
-
-setInterval(criarConfete, 200); // Ajuste o intervalo conforme necessário

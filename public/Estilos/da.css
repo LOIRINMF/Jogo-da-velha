@@ -9,12 +9,16 @@
 
 
 body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
     background-image: linear-gradient(190deg, rgba(145, 6, 158, 0.842) 30%, rgba(16, 43, 192, 0.664));
 
     font-family: "Roboto", sans-serif;
 
 }
-
+/* CHATGPT */
 .GPT {
     display: flex;
     align-items: center;
@@ -64,6 +68,7 @@ h3 {
     size: 2em;
     padding: 10px;
 }
+
 
 .bOUx {
     position: absolute;
@@ -132,9 +137,13 @@ h3 {
     height: 50px;
 
 }
+.seletor .botoes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 button {
-    position: absolute;
     transition-duration: 0.5s;
 
     background-color: rgba(8, 119, 223, 0.63);
@@ -149,13 +158,6 @@ button {
     border: 2px solid #000000;
 }
 
-.btBola {
-    left: 10%;
-}
-
-.btXis {
-    left: 81%;
-}
 
 .btBola:hover,
 .btXis:hover {
@@ -179,12 +181,12 @@ button {
 
     height: 200px;
 
-    background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
-    color: white;
+    background: linear-gradient(90deg, #c50707d7, #10b410ec, #0606c2d8);
+    color: rgb(0, 0, 0);
     background-size: 200% 100%;
     
     font-size: 2em;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto','Arial', sans-serif;
     
     text-align: center;
     

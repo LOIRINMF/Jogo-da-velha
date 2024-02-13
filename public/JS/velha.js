@@ -64,23 +64,23 @@ function bolaORxis(a) {
         //Pegando o ID da box e colocando em uma (var)
         const H = document.querySelector('#bOx' + a)
         const L = document.querySelector('#l' + a)
+        let S = ''
 
         // fazer a separaçao de bola ou xis ||CERTO||
         if (testeB == 1) {
             H.innerHTML = "O"
+            S = 'X'
 
-            sistema.innerHTML = "vez do X"
-            
             testeB = 0
             testeX = 1
         } else {
             H.innerHTML = "X"
-            
-            sistema.innerHTML = "vez do O"
+            S = 'O'
 
             testeX = 0
             testeB = 1
         }
+        sistema.innerHTML = 'Vez do jogador de ' + S
 
         L.onclick = null;
         jogar(a)
@@ -124,18 +124,36 @@ function verificarVencedor() {
 function jogar(a) {
     let linha = Math.floor((a - 1) / 3);
     let coluna = (a - 1) % 3;
-    
+
     tabuleiroV[linha][coluna] = testeB === 1 ? "X" : "O";
 
     // Verificar se há um vencedor após a jogada
     let vencedor = verificarVencedor();
     if (vencedor !== null) {
+
         alert("Jogador " + vencedor + " venceu!");
+
         // Lógica para reiniciar o jogo.
+        tabuleiroV = [
+            ["", "", ""],
+            ["", "", ""],
+            ["", "", ""]
+        ];
+
+        function limp() {
+            for (let L = 1; L < 10; L++) {
+
+                let Limpar = document.querySelector('#bOx' + L);
+                let recomeca = document.querySelector('#l' + L);
+
+                Limpar.innerHTML = ''
+                recomeca.onclick = true;
+            }
+        }
+        limp()
     }
 }
 
-//Animação
 // Simulando o restante do código sendo exibido após 7 segundos
 /*
 setTimeout(function () {
