@@ -7,7 +7,7 @@
 
     <title> #Jogo da velha# </title>
 
-    <link rel="stylesheet" href="./Estilos/animacoes.scss">
+    <link rel="stylesheet" href="./Estilos/Tabela.css">
     <link rel="stylesheet" href="./Estilos/animacao.css">
     <link rel="stylesheet" href="./Estilos/da.css">
 
@@ -15,9 +15,19 @@
 
 <body>
     <header>
-        <h1 class="titulor"> Jogo da velha </h1>
-        <h3 id="sistem"> Aoba! quem começa? </h3>
+        <div class="header__H">
+            <h1 class="titulor"> Jogo da velha </h1>
+        </div>
 
+        <div class="tabala">
+            <div class="tabela__de__pontos">
+
+            </div>
+        </div>
+
+        <div class="sistema__jogo">
+            <h3 id="sistem"> Aoba! quem começa? </h3>
+        </div>
     </header>
 
     <main>
@@ -82,11 +92,18 @@
             <div class="botoes">
                 <button class="btBola" onclick="bola()" id="bola">BOLA</button>
                 <button class="btXis" onclick="xis()" id="xis">XIS</button>
+
+                <button class="reset" onclick="limp()"> Impate </button>
             </div>
         </div>
 
     </main>
 
+    <footer>
+        <div class="footer__C">
+            <p>LOIRINMF</p>
+        </div>
+    </footer>
     <!-- JOGO DA VELHA QUE O CHATGPT VEZ, peguei como base.
     <div class="loading-container">
         <h1>LOADING</h1>
@@ -95,7 +112,7 @@
     -->
     <!-- fim do codigo chamada do JS-->
     <script src="./JS/velha.js"></script>
-    
+
 
 </body>
 

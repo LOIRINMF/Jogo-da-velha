@@ -52,23 +52,54 @@ body {
 
 /*EM  CIMA FOI O GPT QUE FEZ!*/
 
+header {
+    position: fixed;
+
+    max-width: 350px;
+
+    top: 10px;
+    left: 10px;
+    bottom: 0;
+
+}
+.header__H {
+    background: black;
+
+    border:5px solid rgba(18, 90, 90, 0.904);
+    border-radius: 30px;
+    box-shadow: 2px 6px 2px rgba(0, 0, 0, 0.411);
+
+}
+
 .titulor {
     text-align: center;
 
-    padding: 13px;
+    padding: 8px;
 
-    color: rgba(240, 142, 13, 0.973);
+    color: rgba(26, 221, 235, 0.973);
+
 }
 
 h3 {
     text-align: center;
 
-    color: red;
+    color: rgb(245, 231, 32);
 
     font-size: 1.5em;
     padding: 10px;
 }
 
+.sistema__jogo {
+    margin: 10px;
+
+    background: gray;
+
+    border: 2px solid rgba(128, 128, 128, 0.658);
+    border-radius: 30px;
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.37);
+
+    flex-direction: column;
+}
 
 .bOUx {
     position: absolute;
@@ -81,6 +112,13 @@ h3 {
 
     font-size: 40px;
 
+}
+
+main {
+
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 100px;
 }
 
 .jogo-da-velha {
@@ -137,6 +175,7 @@ h3 {
     height: 50px;
 
 }
+
 .seletor .botoes {
     display: flex;
     justify-content: space-around;
@@ -158,13 +197,26 @@ button {
     border: 2px solid #000000;
 }
 
-
 .btBola:hover,
 .btXis:hover {
     background-color: rgba(0, 0, 0, 0.856);
     color: rgb(255, 255, 255);
 }
 
+.reset {
+    background-color: rgba(8, 119, 223, 0.63);
+    color: black;
+}
+
+.footer__C {
+    margin-left: 300px
+}
+
+.footer__C p{
+    color: lime;
+}
+
+/*
 @keyframes colorChange {
     0% {
       background-position: 100% 0%;
@@ -192,3 +244,4 @@ button {
     
     animation: colorChange 3s ease infinite;
   }
+  */
