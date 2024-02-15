@@ -24,6 +24,7 @@ body {
     font-family: "Roboto", sans-serif;
 
 }
+
 /* CHATGPT */
 .GPT {
     display: flex;
@@ -68,10 +69,11 @@ header {
     bottom: 0;
 
 }
+
 .header__H {
     background: black;
 
-    border:5px solid var(--border);
+    border: 5px solid var(--border);
     border-radius: 30px;
     box-shadow: 2px 6px 2px var(--shadow);
 
@@ -89,7 +91,7 @@ header {
 h3 {
     text-align: center;
 
-    color: rgb(245, 231, 32);
+    color: rgb(0, 0, 0);
 
     font-size: 1.5em;
     padding: 10px;
@@ -97,10 +99,10 @@ h3 {
 
 .header__sistema {
     position: fixed;
-    
+
     top: 20px;
     right: 15px;
-    bottom:0px;
+    bottom: 0px;
 
     max-width: 300px;
 
@@ -108,18 +110,20 @@ h3 {
     border: 2px solid var(--border);
     border-radius: 30px;
     box-shadow: 2px 6px 2px var(--shadow);
-}
-.sistema__jogo {
 
-    margin: 15px;
 
-    text-align: center;
-    background: gray;
+    & .sistema__jogo {
 
-    border: 2px solid rgba(128, 128, 128, 0.658);
-    border-radius: 30px;
-    box-shadow: 2px 5px 2px var(--shadow);
+        margin: 15px;
 
+        text-align: center;
+        background: rgb(75, 184, 142);
+
+        border: 2px solid var(--border);
+        border-radius: 30px;
+        box-shadow: 2px 5px 2px var(--shadow);
+
+    }
 }
 
 .tabela {
@@ -128,8 +132,7 @@ h3 {
 
     margin: 5px;
 
-    background-color: pink;
-    color: blue;
+    background-color: rgb(180, 46, 169);
 
     border: 2px solid var(--border);
     border-radius: 30px;
@@ -140,8 +143,42 @@ h3 {
         margin: 5px;
         padding: 5px;
 
-        background: red;
+        background: rgb(105, 209, 8);
     }
+
+    & table {
+        width: 100%;
+        
+        margin: 5px 0 5px 0;
+
+        border-collapse: collapse;
+
+    }
+
+    & th {
+        color: rgb(17, 202, 226);
+        background-color: rgb(252, 252, 252);
+
+    }
+    & td {
+        color: rgb(28, 202, 37);
+        background-color: rgb(38, 76, 247);
+    }
+
+    & th,
+    td {
+        padding: 8px;
+
+        border: 2px solid #291e1eb7;
+        
+        text-align: center;
+    }
+    & .deco {
+        background-color: transparent;
+
+        border: none;
+    }
+    
 }
 
 .bOUx {
@@ -248,7 +285,7 @@ button {
     margin-left: 300px
 }
 
-.footer__C p{
+.footer__C p {
     color: lime;
 }
 
