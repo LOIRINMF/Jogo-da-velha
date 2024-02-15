@@ -7,7 +7,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
 
-
+/* Variaveis*/
 :root {
 
     --shadow: rgba(0, 0, 0, 0.466);
@@ -25,7 +25,254 @@ body {
 
 }
 
-/* CHATGPT */
+header {
+    position: fixed;
+
+    max-width: 350px;
+
+    top: 20px;
+    left: 10px;
+    bottom: 0;
+
+    & .header__H {
+        background: black;
+
+        border: 5px solid var(--border);
+        border-radius: 30px;
+        box-shadow: 2px 6px 2px var(--shadow);
+
+    }
+
+    & .titulor {
+        text-align: center;
+
+        padding: 8px;
+
+        color: rgba(26, 221, 235, 0.973);
+
+    }
+}
+
+.header__sistema {
+    position: fixed;
+
+    top: 20px;
+    right: 15px;
+    bottom: 0px;
+
+    max-width: 300px;
+
+    background-color: #000000;
+    border: 2px solid var(--border);
+    border-radius: 30px;
+    box-shadow: 2px 6px 2px var(--shadow);
+
+
+    & .sistema__jogo {
+
+        margin: 15px;
+
+        text-align: center;
+        background: rgb(75, 184, 142);
+
+        border: 2px solid var(--border);
+        border-radius: 30px;
+        box-shadow: 2px 5px 2px var(--shadow);
+
+    }
+
+    & .sistema__jogo h3 {
+        text-align: center;
+
+        color: rgb(0, 0, 0);
+
+        font-size: 1.5em;
+        padding: 10px;
+    }
+}
+
+.tabela {
+    display: flex;
+    justify-content: center;
+
+    margin: 5px;
+
+    background-color: rgb(180, 46, 169);
+
+    border: 2px solid var(--border);
+    border-radius: 30px;
+    box-shadow: 2px 6px 2px var(--shadow);
+
+    & .tabela__de__pontos {
+
+        margin: 5px;
+        padding: 5px;
+
+        background: rgb(105, 209, 8);
+    }
+
+    & table {
+        width: 100%;
+
+        margin: 5px 0 5px 0;
+
+        border-collapse: collapse;
+
+    }
+
+    & th {
+        color: rgb(17, 202, 226);
+        background-color: rgb(252, 252, 252);
+
+    }
+
+    & td {
+        color: rgb(28, 202, 37);
+        background-color: rgb(38, 76, 247);
+    }
+
+    & th,
+    td {
+        padding: 8px;
+
+        border: 2px solid #291e1eb7;
+
+        text-align: center;
+    }
+
+    & .deco {
+        background-color: transparent;
+
+        border: none;
+    }
+
+}
+
+.jogo-da-velha {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+
+    & .box {
+        display: inline-block;
+        position: relative;
+
+        width: 150px;
+        height: 150px;
+
+        margin: 1px;
+
+        background-color: rgba(0, 0, 0, 0.336);
+
+        text-align: center;
+
+    }
+
+    & .bOUx {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        margin: -25px 0 0 -11px;
+
+        text-align: center;
+
+        font-size: 40px;
+
+    }
+}
+
+.box:hover {
+    background-color: rgba(187, 17, 17, 0.699);
+}
+
+.certo:hover {
+    background-color: rgba(0, 255, 0, 0.637);
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* BUTTON */
+.seletor {
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+
+    & .botoes {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    & button {
+        transition-duration: 0.5s;
+
+        width: 100px;
+
+        margin: 10px;
+
+        border-radius: 20px;
+        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.363);
+        border: 2px solid #000000;
+    }
+}
+
+.btBola,
+.btXis,
+.reset {
+    background-color: rgba(8, 119, 223, 0.63);
+    color: black;
+
+}
+
+.outraB {
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+}
+
+.outraX {
+    background-color: rgb(255, 0, 0);
+    color: rgb(200, 245, 0);
+}
+
+.btBola:hover,
+.btXis:hover,
+.reset:hover {
+    background-color: rgba(0, 0, 0, 0.856);
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    & .footer__C {
+        position: fixed;
+
+        bottom: 10px;
+
+        margin: 10px;
+        padding: 10px;
+
+        background: black;
+    }
+
+    & a {
+        text-decoration: none;
+
+        color: lime;
+    }
+}
+
+/* CHATGPT 
 .GPT {
     display: flex;
     align-items: center;
@@ -57,239 +304,6 @@ body {
     cursor: pointer;
 }
 
-/*EM  CIMA FOI O GPT QUE FEZ!*/
-
-header {
-    position: fixed;
-
-    max-width: 350px;
-
-    top: 10px;
-    left: 10px;
-    bottom: 0;
-
-}
-
-.header__H {
-    background: black;
-
-    border: 5px solid var(--border);
-    border-radius: 30px;
-    box-shadow: 2px 6px 2px var(--shadow);
-
-}
-
-.titulor {
-    text-align: center;
-
-    padding: 8px;
-
-    color: rgba(26, 221, 235, 0.973);
-
-}
-
-h3 {
-    text-align: center;
-
-    color: rgb(0, 0, 0);
-
-    font-size: 1.5em;
-    padding: 10px;
-}
-
-.header__sistema {
-    position: fixed;
-
-    top: 20px;
-    right: 15px;
-    bottom: 0px;
-
-    max-width: 300px;
-
-    background-color: #000000;
-    border: 2px solid var(--border);
-    border-radius: 30px;
-    box-shadow: 2px 6px 2px var(--shadow);
-
-
-    & .sistema__jogo {
-
-        margin: 15px;
-
-        text-align: center;
-        background: rgb(75, 184, 142);
-
-        border: 2px solid var(--border);
-        border-radius: 30px;
-        box-shadow: 2px 5px 2px var(--shadow);
-
-    }
-}
-
-.tabela {
-    display: flex;
-    justify-content: center;
-
-    margin: 5px;
-
-    background-color: rgb(180, 46, 169);
-
-    border: 2px solid var(--border);
-    border-radius: 30px;
-    box-shadow: 2px 6px 2px var(--shadow);
-
-    & .tabela__de__pontos {
-
-        margin: 5px;
-        padding: 5px;
-
-        background: rgb(105, 209, 8);
-    }
-
-    & table {
-        width: 100%;
-        
-        margin: 5px 0 5px 0;
-
-        border-collapse: collapse;
-
-    }
-
-    & th {
-        color: rgb(17, 202, 226);
-        background-color: rgb(252, 252, 252);
-
-    }
-    & td {
-        color: rgb(28, 202, 37);
-        background-color: rgb(38, 76, 247);
-    }
-
-    & th,
-    td {
-        padding: 8px;
-
-        border: 2px solid #291e1eb7;
-        
-        text-align: center;
-    }
-    & .deco {
-        background-color: transparent;
-
-        border: none;
-    }
-    
-}
-
-.bOUx {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: -25px 0 0 -11px;
-
-    text-align: center;
-
-    font-size: 40px;
-
-}
-
-.jogo-da-velha {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.box {
-    display: inline-block;
-    position: relative;
-
-    width: 150px;
-    height: 150px;
-
-    margin: 1px;
-
-    background-color: rgba(0, 0, 0, 0.336);
-
-    text-align: center;
-
-}
-
-.box:hover {
-    background-color: rgba(187, 17, 17, 0.699);
-}
-
-.certo:hover {
-    background-color: rgba(0, 255, 0, 0.637);
-}
-
-.outraX {
-    background-color: rgb(255, 0, 0);
-    color: rgb(200, 245, 0);
-}
-
-.outraB {
-    background-color: rgb(255, 0, 0);
-    color: rgb(200, 245, 0);
-}
-
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/* BUTTON */
-
-.seletor {
-    position: relative;
-
-    width: 100%;
-    height: 50px;
-
-}
-
-.seletor .botoes {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-button {
-    transition-duration: 0.5s;
-
-    background-color: rgba(8, 119, 223, 0.63);
-    color: black;
-
-    width: 100px;
-
-    margin: 10px;
-
-    border-radius: 20px;
-    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.363);
-    border: 2px solid #000000;
-}
-
-.btBola:hover,
-.btXis:hover {
-    background-color: rgba(0, 0, 0, 0.856);
-    color: rgb(255, 255, 255);
-}
-
-.reset {
-    background-color: rgba(8, 119, 223, 0.63);
-    color: black;
-}
-
-.footer__C {
-    margin-left: 300px
-}
-
-.footer__C p {
-    color: lime;
-}
-
-/*
 @keyframes colorChange {
     0% {
       background-position: 100% 0%;

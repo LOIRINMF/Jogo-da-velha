@@ -35,11 +35,12 @@ function xis() {
 }
 // ATE AQUI
 function nbutton() {
+    const novoB = document.querySelector('.btBola');
+    novoB.classList.add('outraB');
+    
     const novoX = document.querySelector('.btXis');
     novoX.classList.toggle('outraX');
 
-    const novoB = document.querySelector('.btBola');
-    novoB.classList.add('outraB');
 }
 
 function verde() {
