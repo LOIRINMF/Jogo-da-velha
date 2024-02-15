@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> #Jogo da velha# </title>
+    <title> # Jogo da velha # </title>
 
     <link rel="stylesheet" href="./Estilos/Tabela.css">
     <link rel="stylesheet" href="./Estilos/animacao.css">
@@ -19,18 +19,41 @@
             <h1 class="titulor"> Jogo da velha </h1>
         </div>
 
-        <div class="tabala">
+
+    </header>
+
+    <div class="header__sistema">
+        <div class="sistema__jogo">
+
+            <h3 id="sistem"> Aoba! quem começa? </h3>
+
+        </div>
+
+        <div class="tabela">
             <div class="tabela__de__pontos">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jogador 1</th>
+                            <th>Jogador 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Winner: 0</td>
+                            <td>Winner: 0</td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
 
             </div>
         </div>
 
-        <div class="sistema__jogo">
-            <h3 id="sistem"> Aoba! quem começa? </h3>
-        </div>
-    </header>
+    </div>
 
-    <main>
+    <main style="margin-top: 50px;">
         <section class="game">
             <section class="jogo-da-velha">
 
@@ -93,7 +116,7 @@
                 <button class="btBola" onclick="bola()" id="bola">BOLA</button>
                 <button class="btXis" onclick="xis()" id="xis">XIS</button>
 
-                <button class="reset" onclick="limp()"> Impate </button>
+                <button class="reset" onclick="limp()"> # Velha # </button>
             </div>
         </div>
 
