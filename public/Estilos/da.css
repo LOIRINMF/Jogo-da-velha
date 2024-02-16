@@ -12,6 +12,9 @@
 
     --shadow: rgba(0, 0, 0, 0.466);
     --border: rgba(18, 90, 90, 0.904);
+
+
+    --font-r: "Roboto", sans-serif;
 }
 
 body {
@@ -19,16 +22,18 @@ body {
     justify-content: center;
     align-items: center;
 
+    width: 100%;
+
     background-image: linear-gradient(190deg, rgba(145, 6, 158, 0.842) 30%, rgba(16, 43, 192, 0.664));
 
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-r);
 
 }
 
 header {
     position: fixed;
 
-    max-width: 350px;
+    max-width: 388px;
 
     top: 20px;
     left: 10px;
@@ -38,7 +43,7 @@ header {
         background: black;
 
         border: 5px solid var(--border);
-        border-radius: 30px;
+        border-radius: 20px;
         box-shadow: 2px 6px 2px var(--shadow);
 
     }
@@ -46,11 +51,135 @@ header {
     & .titulor {
         text-align: center;
 
-        padding: 8px;
+        padding: 10px;
 
         color: rgba(26, 221, 235, 0.973);
 
     }
+}
+
+.definir__jogador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 388px;
+    margin-top: 10px;
+    background-color: rgb(255, 0, 242);
+}
+
+.definir__jogador .jogadores {
+    margin: 10px;
+    padding: 10px;
+
+    cursor: cell;
+    background-color: rgb(156, 71, 138);
+}
+
+.definir__jogador .jogadores .input__n {
+
+    width: 320px;
+
+    color: #fff;
+
+    font-size: 1em;
+
+    padding: 15px 5px 5px;
+
+    background-color: #4f4f4f;
+    border: none;
+    border-radius: 5px;
+
+}
+
+/*INPUT_N*/
+.form__j {
+    position: relative;
+    width: 70%;
+
+    margin-left: 10px;
+
+    overflow: hidden;
+}
+
+label {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    color: #1eff00;
+
+    border-bottom: 2px solid #ffffff;
+    pointer-events: none;
+}
+
+span {
+    position: absolute;
+
+    bottom: 5px;
+    left: 5px;
+
+    color: rgb(212, 17, 212);
+
+    font-size: 1.3em;
+
+    transition: all 0.3s ease;
+}
+
+label::after {
+    position: absolute;
+    /*Aqui eu vejo depois*/
+    content: "= Intere =";
+    
+    left: 3px;
+    
+    width: 100%;
+    height: 100%;
+    bottom: -2px;
+    
+    border-bottom: 3px solid #f50591;
+    
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+}
+
+input:focus+label span,
+input:valid+label span {
+    transform: translateY(-150%);
+    
+    font-size: 14px;
+    
+    bottom: 10px;
+    
+    color: #1900f8;
+}
+
+input:focus+label::after,
+input:valid+label::after {
+    transform: translateX(0%);
+}
+
+/*INPUT_S*/
+.form__s {
+    display: flex;
+    justify-content: start;
+    
+    margin-left: 20px;
+}
+.input__submit {
+    width: 150px;
+
+    margin: 7px;
+    padding: 5px;
+
+    color: rgba(9, 213, 228, 0.938);
+    background-color: #000000;
+    border: 2px #4f4f4f;
+    border-radius: 30px;
 }
 
 .header__sistema {

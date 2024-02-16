@@ -37,7 +37,7 @@ function xis() {
 function nbutton() {
     const novoB = document.querySelector('.btBola');
     novoB.classList.add('outraB');
-    
+
     const novoX = document.querySelector('.btXis');
     novoX.classList.toggle('outraX');
 
@@ -168,6 +168,20 @@ function limp() {
     // Libera os botoês para joga denovo
     document.querySelector('.btXis').disabled = false
     document.getElementById("bola").disabled = false
+}
+
+function nome(j) {
+    let nick_j = document.querySelector('#jogador')
+
+    if (j === 1) {
+        let jogador_1 = document.querySelector('#j1')
+
+        jogador_1.innerHTML = nick_j.value
+
+    } else {
+        let jogador_2 = document.querySelector('#j2')
+        jogador_2.innerHTML = nick_j.value
+    }
 }
 
 // Simulando o restante do código sendo exibido após 7 segundos

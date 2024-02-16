@@ -19,9 +19,29 @@
             <h1 class="titulor"> Jogo da velha </h1>
         </div>
 
+        <section class="definir__jogador">
+            <div class="jogadores">
+                <form class="form__j">
+                    <input name="name" id="jogador" class="input__n" maxlength="20" autocomplete="off" required />
+                    <label for="name">
+                        <span class="nick__name">Nick-Name</span>
+                    </label>
+                </form>
+
+                <form class="form__s">
+                    <input type="button" class="input__submit" value="Nome jogador 1" onclick="nome(1)">
+                    <input type="button" class="input__submit" value="Nome jogador 2" onclick="nome(2)">
+                </form>
+
+            </div>
+
+        </section>
+
+
         <footer>
             <div class="footer__C">
-                <a href="http://github.com/loirinmf" target="_blank" rel="noopener noreferrer"> = feito por { LOIRIN } =</a>
+                <a href="http://github.com/loirinmf" target="_blank" rel="noopener noreferrer"> = feito por { LOIRIN }
+                    =</a>
             </div>
         </footer>
 
@@ -41,7 +61,7 @@
                     <thead>
                         <tr>
                             <th class="deco"></th>
-                            
+
                             <th id="j1">Jogador 1</th>
                             <th id="j2">Jogador 2</th>
 
@@ -51,7 +71,7 @@
                     <tbody>
                         <tr>
                             <td class="deco"></td>
-                            
+
                             <td id="p_j1"> 0 </td>
                             <td id="p_j2"> 0 </td>
 
