@@ -10,6 +10,19 @@
 /* Variaveis*/
 :root {
 
+    /*Principal*/
+    --cor-01: rgb(16, 3, 61);
+    --cor-02: rgba(17, 5, 85, 0.979);
+    --cor-03: rgb(16, 92, 153);
+    --cor-04: #f59d80;
+    --cor-05: rgb(236, 32, 5);
+    --cor-06: rgb(107, 4, 4);
+    /*Sombras*/
+
+    --som-01: rgba(24, 3, 3, 0.507);
+    --som-01: rgba(70, 61, 61, 0.521);
+
+    /*Caixas*/
     --shadow: rgba(0, 0, 0, 0.466);
     --border: rgba(18, 90, 90, 0.904);
 
@@ -24,7 +37,7 @@ body {
 
     width: 100%;
 
-    background-image: linear-gradient(190deg, rgba(145, 6, 158, 0.842) 30%, rgba(16, 43, 192, 0.664));
+    background-image: linear-gradient(190deg, var(--cor-02) 30%, var(--cor-03));
 
     font-family: var(--font-r);
 
@@ -134,15 +147,15 @@ label::after {
     position: absolute;
     /*Aqui eu vejo depois*/
     content: "= Intere =";
-    
+
     left: 3px;
-    
+
     width: 100%;
     height: 100%;
     bottom: -2px;
-    
+
     border-bottom: 3px solid #f50591;
-    
+
     transform: translateX(-100%);
     transition: all 0.4s ease;
 }
@@ -150,11 +163,11 @@ label::after {
 input:focus+label span,
 input:valid+label span {
     transform: translateY(-150%);
-    
+
     font-size: 14px;
-    
+
     bottom: 10px;
-    
+
     color: #1900f8;
 }
 
@@ -167,9 +180,10 @@ input:valid+label::after {
 .form__s {
     display: flex;
     justify-content: start;
-    
+
     margin-left: 20px;
 }
+
 .input__submit {
     width: 150px;
 
