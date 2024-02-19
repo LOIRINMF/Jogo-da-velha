@@ -21,7 +21,7 @@ function bola() {
 
     // Deixar as div box verde.
     verde()
-    // Desabilita os button.
+    // Desabilita visualmente os button.
     nbutton()
 }
 
@@ -39,7 +39,7 @@ function nbutton() {
     novoB.classList.add('desativado');
 
     const novoX = document.querySelector('.btXis');
-    novoX.classList.toggle('desativado');
+    novoX.classList.add('desativado');
 
 }
 
@@ -164,6 +164,20 @@ function limp() {
     // Reseta os parametros de verifição
     testeB = Number(0)
     testeX = Number(0)
+
+    //Devolvendo as cores
+    const denovoX = document.querySelector('.btXis');
+    denovoX.classList.remove('desativado');
+
+    const denovoB = document.querySelector('.btBola');
+    denovoB.classList.remove('desativado');
+
+    let c2 = document.querySelectorAll('.box');
+
+    c2.forEach(element => {
+        element.classList.remove('certo');
+    }
+    );
 
     // Libera os botoês para joga denovo
     document.querySelector('.btXis').disabled = false
