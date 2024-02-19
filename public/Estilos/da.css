@@ -14,7 +14,7 @@
     --cor-01: rgb(16, 3, 61);
     --cor-02: rgba(17, 5, 85, 0.979);
     --cor-03: rgb(16, 92, 153);
-    --cor-04: #f59d80;
+    --cor-04: #ee5b2a;
     --cor-05: rgb(236, 32, 5);
     --cor-06: rgb(107, 4, 4);
     /*Sombras*/
@@ -66,7 +66,7 @@ header {
 
         padding: 10px;
 
-        color: rgba(26, 221, 235, 0.973);
+        color: rgb(232, 248, 8);
 
     }
 }
@@ -78,7 +78,11 @@ header {
 
     max-width: 388px;
     margin-top: 10px;
-    background-color: rgb(255, 0, 242);
+    background-color: var(--cor-01);
+
+    border: 2px solid var(--border);
+    border-radius: 30px;
+    box-shadow: 2px 6px 2px var(--shadow);
 }
 
 .definir__jogador .jogadores {
@@ -86,7 +90,9 @@ header {
     padding: 10px;
 
     cursor: cell;
-    background-color: rgb(156, 71, 138);
+    background-color: var(--cor-02);
+
+    border-radius: 30px;
 }
 
 .definir__jogador .jogadores .input__n {
@@ -124,7 +130,7 @@ label {
     width: 100%;
     height: 100%;
 
-    color: #1eff00;
+    color: #e5ff00;
 
     border-bottom: 2px solid #ffffff;
     pointer-events: none;
@@ -136,7 +142,7 @@ span {
     bottom: 5px;
     left: 5px;
 
-    color: rgb(212, 17, 212);
+    color: rgb(15, 193, 224);
 
     font-size: 1.3em;
 
@@ -146,7 +152,7 @@ span {
 label::after {
     position: absolute;
     /*Aqui eu vejo depois*/
-    content: "= Intere =";
+    content: "= 100% Jesus =";
 
     left: 3px;
 
@@ -187,13 +193,25 @@ input:valid+label::after {
 .input__submit {
     width: 150px;
 
-    margin: 7px;
+    margin: 10px 10px;
     padding: 5px;
 
-    color: rgba(9, 213, 228, 0.938);
+    font-size: 14px;
+    
+    color: rgb(34, 215, 228);
+
     background-color: #000000;
-    border: 2px #4f4f4f;
-    border-radius: 30px;
+    border: 2px solid #4f4f4f;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.input__submit:hover {
+    color: #fff;
+ 
+    background-color: var(--cor-02);
+    border: 2px solid #ffffff;
+
 }
 
 .header__sistema {
@@ -201,7 +219,7 @@ input:valid+label::after {
 
     top: 20px;
     right: 15px;
-    bottom: 0px;
+    bottom: 30px;
 
     max-width: 300px;
 
@@ -216,7 +234,7 @@ input:valid+label::after {
         margin: 15px;
 
         text-align: center;
-        background: rgb(75, 184, 142);
+        background: var(--cor-03);
 
         border: 2px solid var(--border);
         border-radius: 30px;
@@ -227,7 +245,7 @@ input:valid+label::after {
     & .sistema__jogo h3 {
         text-align: center;
 
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
 
         font-size: 1.5em;
         padding: 10px;
@@ -239,8 +257,9 @@ input:valid+label::after {
     justify-content: center;
 
     margin: 5px;
+    padding: 10px;
 
-    background-color: rgb(180, 46, 169);
+    background-color: var(--cor-02);
 
     border: 2px solid var(--border);
     border-radius: 30px;
@@ -251,7 +270,6 @@ input:valid+label::after {
         margin: 5px;
         padding: 5px;
 
-        background: rgb(105, 209, 8);
     }
 
     & table {
@@ -305,12 +323,14 @@ input:valid+label::after {
         width: 150px;
         height: 150px;
 
+        left: 30px;
+
         margin: 1px;
 
         background-color: rgba(0, 0, 0, 0.336);
 
         text-align: center;
-
+        transition: 0.4s;
     }
 
     & .bOUx {
@@ -328,11 +348,11 @@ input:valid+label::after {
 }
 
 .box:hover {
-    background-color: rgba(187, 17, 17, 0.699);
+    background-color: rgba(231, 12, 12, 0.808);
 }
 
 .certo:hover {
-    background-color: rgba(0, 255, 0, 0.637);
+    background-color: rgba(0, 255, 0, 0.836);
 }
 
 .disabled {
@@ -356,30 +376,27 @@ input:valid+label::after {
     & button {
         transition-duration: 0.5s;
 
-        width: 100px;
+        width: 120px;
+
+        font-size: 14px;
 
         margin: 10px;
 
         border-radius: 20px;
-        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.363);
-        border: 2px solid #000000;
+        box-shadow: 2px 4px 2px var(--shadow);
+        border: 3px solid var(--border);
     }
 }
 
 .btBola,
 .btXis,
 .reset {
-    background-color: rgba(8, 119, 223, 0.63);
+    background-color: rgba(8, 119, 223, 0.788);
     color: black;
 
 }
 
-.outraB {
-    background-color: rgb(255, 0, 0);
-    color: rgb(200, 245, 0);
-}
-
-.outraX {
+.desativado {
     background-color: rgb(255, 0, 0);
     color: rgb(200, 245, 0);
 }

@@ -36,10 +36,10 @@ function xis() {
 // ATE AQUI
 function nbutton() {
     const novoB = document.querySelector('.btBola');
-    novoB.classList.add('outraB');
+    novoB.classList.add('desativado');
 
     const novoX = document.querySelector('.btXis');
-    novoX.classList.toggle('outraX');
+    novoX.classList.toggle('desativado');
 
 }
 
