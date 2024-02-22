@@ -187,7 +187,9 @@ function limp() {
 function nome(j) {
     let nick_j = document.querySelector('#jogador')
 
-    if (j === 1) {
+    if (nick_j.value == ''){
+
+    } else if (j === 1) {
         let jogador_1 = document.querySelector('#j1')
 
         jogador_1.innerHTML = nick_j.value
@@ -197,6 +199,14 @@ function nome(j) {
         jogador_2.innerHTML = nick_j.value
     }
 }
+
+document.addEventListener("keydown", function(e) {
+    if(e.keyCode === 13) {
+          
+      e.preventDefault();
+        
+    }
+  });
 
 // Simulando o restante do código sendo exibido após 7 segundos
 /*
