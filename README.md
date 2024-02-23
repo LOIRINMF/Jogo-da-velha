@@ -9,4 +9,4 @@ Intel(R) Atom(TM) x5-Z8350  CPU @ 1.44GHz
 
 Sistema operacional de 64 bits, processador baseado em x64 (não sei como)
 
-    [JOGO DA VELHA](https://loirinmf.github.io/Jogo-da-velha/public/index.html)
+   Veja como esta o [JOGO DA VELHA](https://loirinmf.github.io/Jogo-da-velha/public/jogo.html)
