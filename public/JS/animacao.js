@@ -1,0 +1,1 @@
+// fazer uma animação pra quando alguem vencer ou da velha.
