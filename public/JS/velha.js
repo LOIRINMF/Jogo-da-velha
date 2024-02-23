@@ -33,6 +33,7 @@ function xis() {
     verde()
     nbutton()
 }
+
 // ATE AQUI
 function nbutton() {
     const novoB = document.querySelector('.btBola');
@@ -120,7 +121,7 @@ function verificarVencedor() {
     return null;
 }
 
-//Passa os paramtros pro tabuleiro virtual e chama o verificador de vencedor.
+//Passa os paramtros pro tabuleiro virtual e chama a função que verifica ser há vencedor.
 function jogar(a) {
     let linha = Math.floor((a - 1) / 3);
     let coluna = (a - 1) % 3;
@@ -128,17 +129,21 @@ function jogar(a) {
 
     // Verificar se há um vencedor após a jogada
     let vencedor = verificarVencedor();
-    console.log('teste1000')
+    
     if (vencedor !== null) {
 
         sistema.innerHTML = ("Parabens Jogador " + vencedor + " você venceu!");
 
+        
         // Lógica para reiniciar o jogo.   
-        limp()
+        setTimeout ( function (){
+            limp()
+        }, 5000)
+        
     }
 }
 
-// Ser ouver vencedor apos mostra quem foi essa função reseta o jogo, (pronto para outra rodada?)
+// Ser ouver vencedor apos mostra quem foi, essa função reseta o jogo. (pronto para outra rodada?)
 function limp() {
 
     // Limpa os <h3>
@@ -148,24 +153,24 @@ function limp() {
         Limpar.innerHTML = ""
 
     }
-    // Limpa o tabuleiro virtual
+    // Limpa o tabuleiro virtual.
     for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
             tabuleiroV[i][j] = '';
         }
     }
 
-    // Devolve a função onclick das div.box
+    // Devolve a função onclick das div.box.
     let boxes = document.querySelectorAll('.box');
     boxes.forEach(box => {
         box.onclick = () => bolaORxis(parseInt(box.id.substr(1)));
     });
 
-    // Reseta os parametros de verifição
+    // Reseta os parametros de verifição.
     testeB = Number(0)
     testeX = Number(0)
 
-    //Devolvendo as cores
+    //Devolvendo as cores.
     const denovoX = document.querySelector('.btXis');
     denovoX.classList.remove('desativado');
 
@@ -179,11 +184,12 @@ function limp() {
     }
     );
 
-    // Libera os botoês para joga denovo
+    // Libera os botoês para joga denovo.
     document.querySelector('.btXis').disabled = false
     document.getElementById("bola").disabled = false
 }
 
+// Colocar os nomes dos jogadores na tabela.
 function nome(j) {
     let nick_j = document.querySelector('#jogador')
 
@@ -200,6 +206,7 @@ function nome(j) {
     }
 }
 
+// Um evendo que observa qual tecla foi apertada IF (ENTER) ele não deixa. {isso quebra o input}
 document.addEventListener("keydown", function(e) {
     if(e.keyCode === 13) {
           
