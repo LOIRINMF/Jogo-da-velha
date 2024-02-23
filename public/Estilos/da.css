@@ -343,6 +343,8 @@ input:valid+label::after {
 
         text-align: center;
 
+        color: #fff;
+
         font-size: 40px;
 
     }
