@@ -415,7 +415,6 @@ footer {
     justify-content: center;
     align-items: center;
 
-
     & .footer__C {
         position: fixed;
 
@@ -424,16 +423,31 @@ footer {
         margin: 10px;
         padding: 10px;
 
+        font-size: large;
+        font-family: var(--font-r);
+
         background: black;
     }
 
     & a {
         text-decoration: none;
 
-        color: lime;
+        color: var(--cor-06);
+    }
+
+    & p {
+        display: inline;
+        color: var(--cor-03);
     }
 }
 
+.footer__C a:hover {
+    text-decoration: underline 3px var(--cor-06);
+    
+    color: #e5ff00;
+
+
+}
 /* CHATGPT 
 .GPT {
     display: flex;
