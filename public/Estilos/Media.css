@@ -1,3 +1,11 @@
+/* 
+320px — 480px: dispositivos móveis
+481px — 768px: iPads, tablets
+769px — 1024px: telas pequenas, laptops
+1025px — 1200px: desktops, telas grandes
+1201px e acima —  telas muito grandes, TVs 
+*/
+
 /* CELULARES EM "PÉ" */
 @media screen and (max-width: 500px) {
 
@@ -19,17 +27,14 @@
         background-color: rgb(0, 0, 0);
     }
 
+    /* HEADER */
     header {
         max-width: 350px;
 
-        & .header__H {
-
-
-            background: blue;
-        }
-
         & .titulor {
-            padding: 5px;
+            padding: 2px;
+
+            font-size: 1.8em;
 
         }
     }
@@ -52,10 +57,58 @@
     }
 
     /* SISTEMA */
-
     .header__sistema {
+        position: revert;
 
-        
+        margin: 10px 0 0 30px;
+
+        & .sistema__jogo {
+            margin: 8px;
+        }
+
+        & .sistema__jogo h3 {
+
+            font-size: 0.9em;
+        }
+    }
+
+    /* TABELA */
+    .tabela {
+
+        padding: 2px;
+
+    }
+
+    /* JOGO*/
+    .jogo-da-velha {
+
+        & .box {
+            width: 110px;
+            height: 110px;
+        }
+    }
+
+    main {
+        display: flex;
+
+        margin-top: 20px;
+
+    }
+
+    .game {
+        position: relative;
+
+        left: 200px;
+    }
+
+    /* FOTTER */
+
+    footer {
+        display: none;
+
+        left: 560px;
+
+        /*& .footer__C {}*/ 
     }
 
 }

@@ -308,6 +308,10 @@ input:valid+label::after {
 
 }
 
+main {
+    margin-top: 40px;
+}
+
 .jogo-da-velha {
     display: flex;
 
@@ -412,14 +416,11 @@ input:valid+label::after {
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   position: fixed;
+
+   bottom: 0;
 
     & .footer__C {
-        position: fixed;
-
-        bottom: 10px;
 
         margin: 10px;
         padding: 10px;
@@ -447,8 +448,8 @@ footer {
     
     color: #e5ff00;
 
-
 }
+
 /* CHATGPT 
 .GPT {
     display: flex;
