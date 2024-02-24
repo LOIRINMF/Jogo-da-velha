@@ -47,8 +47,6 @@ body {
 header {
     position: fixed;
 
-    max-width: 388px;
-
     top: 20px;
     left: 10px;
     bottom: 0;
@@ -234,7 +232,7 @@ input:valid+label::after {
 
         margin: 15px;
 
-        text-align: center;
+        text-align: left;
         background: var(--cor-03);
 
         border: 2px solid var(--border);

@@ -1,0 +1,61 @@
+/* CELULARES EM "PÉ" */
+@media screen and (max-width: 500px) {
+
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    header {
+        & .header__H {
+            background: red;
+        }
+    }
+}
+
+/* CELULARES EM "DEITADO" */
+@media screen and (min-width: 501px) and (max-width: 920px) {
+
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    header {
+        max-width: 350px;
+
+        & .header__H {
+
+
+            background: blue;
+        }
+
+        & .titulor {
+            padding: 5px;
+
+        }
+    }
+
+    .definir__jogador .jogadores {
+        padding: 0px;
+        max-width: 330px;
+
+    }
+
+    .form__j {
+        left: 8px;
+        margin-top: 5px;
+
+    }
+
+    .form__s {
+        margin-left: 5px;
+
+    }
+
+    /* SISTEMA */
+
+    .header__sistema {
+
+        
+    }
+
+}
