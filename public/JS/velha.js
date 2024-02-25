@@ -193,19 +193,20 @@ function limp() {
 
 // Colocar os nomes dos jogadores na tabela.
 function nome(j) {
-    let nick_j = toUpperCase(document.querySelector('#jogador'))
- 
-    if (nick_j.value == '') {
+    let nick_j = document.querySelector('#jogador')
+    let nick = nick_j.value.toUpperCase()
+
+    if (nick == '') {
 
     } else if (j === 1 ) {
         let jogador_1 = document.querySelector('#j1')
 
-        jogador_1.innerHTML = nick_j.value
+        jogador_1.innerHTML = nick
 
-    } else if (j === 2) {
+    } else {
         let jogador_2 = document.querySelector('#j2')
 
-        jogador_2.innerHTML = nick_j.value
+        jogador_2.innerHTML = nick
 
     }
 }
@@ -215,12 +216,14 @@ document.addEventListener("keydown", function (e) {
     if (e.keyCode === 13) {
         e.preventDefault();
 
-        let primeiro_j = document.querySelector('#j1')
-        
-        if (primeiro_j.value !== "Jogador 1"){
+       /* let primeiro_j = document.querySelector('#j1')
+
+        if (primeiro_j.value === 'Jogador 1'){
             nome(1)
-        } else {nome(2)} 
-        
+        } else {
+            nome(2)
+        } 
+        */
     }
 });
 
