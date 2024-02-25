@@ -20,6 +20,8 @@
 
         & .header__H {
             
+            margin-top: 30px;
+
             font-size: 1em;
         }
     }
@@ -30,7 +32,7 @@
 
         max-width: 360px;
 
-        margin: 10px;
+        margin: 50px 10px 10px 10px;
 
         & .sistema__jogo {
 
@@ -44,27 +46,52 @@
         }
     }
 
+    .definir__jogador {
+
+        margin-top: 35px;
+
+    }
+
     /* JOGO */
     main {
         display: flex;
 
-        margin: 0;
+        margin: 50px 0 0 0;
 
     }
 
     .game {
         position: relative;
 
-        
+        left: 25px;
 
     }
 
     .jogo-da-velha {
 
         & .box {
-            width: 80px;
-            height: 80px;
+
+            width: 95px;
+            height: 95px;
+
         }
+    }
+
+    .seletor {
+
+        & button {
+            width: 80px;
+
+        }
+    }
+
+    /* FOTTER */
+    footer {
+        display: none;
+
+        left: 80px;
+
+        /*& .footer__C {}*/
     }
 }
 
