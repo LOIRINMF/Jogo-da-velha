@@ -7,15 +7,63 @@
 */
 
 /* CELULARES EM "PÉ" */
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
 
     body {
         background-color: rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* HEADER */
     header {
+        position: revert;
+
         & .header__H {
-            display: none;
+            
+            font-size: 1em;
+        }
+    }
+
+    /* SISTEMA */
+    .header__sistema {
+        position: revert;
+
+        max-width: 360px;
+
+        margin: 10px;
+
+        & .sistema__jogo {
+
+            margin-top: 10px;
+            
+        }
+
+        & .sistema__jogo h3 {
+
+            font-size: 0.9em;
+        }
+    }
+
+    /* JOGO */
+    main {
+        display: flex;
+
+        margin: 0;
+
+    }
+
+    .game {
+        position: relative;
+
+        
+
+    }
+
+    .jogo-da-velha {
+
+        & .box {
+            width: 80px;
+            height: 80px;
         }
     }
 }
@@ -118,6 +166,6 @@
 
         left: 560px;
 
-        /*& .footer__C {}*/ 
+        /*& .footer__C {}*/
     }
 }
