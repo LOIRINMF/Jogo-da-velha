@@ -56,7 +56,7 @@ function verde() {
 /* função que verifica os parametros. */
 function bolaORxis(a) {
     if (testeB == 0 && testeX == 0) {
-        sistema.innerHTML = "Selecione com qual letra você ira começa X ou BOLA!!"
+        sistema.innerHTML = "Selecione com qual você ira começa X ou BOLA!!"
 
     } else {
 
@@ -129,17 +129,17 @@ function jogar(a) {
 
     // Verificar se há um vencedor após a jogada
     let vencedor = verificarVencedor();
-    
+
     if (vencedor !== null) {
 
-        sistema.innerHTML = ("Parabens Jogador " + vencedor + " você venceu!");
+        sistema.innerHTML = "Parabens Jogador " + vencedor + " você venceu!";
 
-        
+
         // Lógica para reiniciar o jogo.   
-        setTimeout ( function (){
+        setTimeout(function () {
             limp()
-        }, 5000)
-        
+        }, 3000)
+
     }
 }
 
@@ -184,6 +184,8 @@ function limp() {
     }
     );
 
+    sistema.innerHTML = ''
+
     // Libera os botoês para joga denovo.
     document.querySelector('.btXis').disabled = false
     document.getElementById("bola").disabled = false
@@ -191,29 +193,36 @@ function limp() {
 
 // Colocar os nomes dos jogadores na tabela.
 function nome(j) {
-    let nick_j = document.querySelector('#jogador')
+    let nick_j = toUpperCase(document.querySelector('#jogador'))
+ 
+    if (nick_j.value == '') {
 
-    if (nick_j.value == ''){
-
-    } else if (j === 1) {
+    } else if (j === 1 ) {
         let jogador_1 = document.querySelector('#j1')
 
         jogador_1.innerHTML = nick_j.value
 
-    } else {
+    } else if (j === 2) {
         let jogador_2 = document.querySelector('#j2')
+
         jogador_2.innerHTML = nick_j.value
+
     }
 }
 
 // Um evendo que observa qual tecla foi apertada IF (ENTER) ele não deixa. {isso quebra o input}
-document.addEventListener("keydown", function(e) {
-    if(e.keyCode === 13) {
-          
-      e.preventDefault();
+document.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+        e.preventDefault();
+
+        let primeiro_j = document.querySelector('#j1')
+        
+        if (primeiro_j.value !== "Jogador 1"){
+            nome(1)
+        } else {nome(2)} 
         
     }
-  });
+});
 
 // Simulando o restante do código sendo exibido após 7 segundos
 /*
