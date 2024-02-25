@@ -15,13 +15,13 @@
 
     header {
         & .header__H {
-            background: red;
+            display: none;
         }
     }
 }
 
-/* CELULARES EM "DEITADO" */
-@media screen and (min-width: 501px) and (max-width: 920px) {
+/* CELULARES EM PAISAGEM */
+@media screen and (min-width: 750px) and (max-width: 920px) {
 
     body {
         background-color: rgb(0, 0, 0);
@@ -37,6 +37,10 @@
             font-size: 1.8em;
 
         }
+    }
+
+    .header__H {
+        display: none;
     }
 
     .definir__jogador .jogadores {
@@ -80,14 +84,6 @@
     }
 
     /* JOGO*/
-    .jogo-da-velha {
-
-        & .box {
-            width: 112px;
-            height: 112px;
-        }
-    }
-
     main {
         display: flex;
 
@@ -98,11 +94,25 @@
     .game {
         position: relative;
 
-        left: 200px;
+        left: 165px;
+    }
+
+    .jogo-da-velha {
+
+        & .box {
+            width: 112px;
+            height: 112px;
+        }
+    }
+
+    .seletor {
+
+        & button {
+            width: 80px;
+        }
     }
 
     /* FOTTER */
-
     footer {
         display: none;
 
@@ -110,5 +120,4 @@
 
         /*& .footer__C {}*/ 
     }
-
 }
