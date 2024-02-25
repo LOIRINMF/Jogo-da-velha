@@ -6,7 +6,7 @@
 1201px e acima —  telas muito grandes, TVs 
 */
 
-/* CELULARES EM "PÉ" */
+/* CELULARES EM RETRATO */
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
     body {
@@ -19,7 +19,7 @@
         position: revert;
 
         & .header__H {
-            
+
             margin-top: 30px;
 
             font-size: 1em;
@@ -37,7 +37,7 @@
         & .sistema__jogo {
 
             margin-top: 10px;
-            
+
         }
 
         & .sistema__jogo h3 {
@@ -195,4 +195,71 @@
 
         /*& .footer__C {}*/
     }
+}
+
+/* PC */
+@media screen and (min-width: 921px){
+    
+}
+/* TELAS GRANDES (TV) */
+@media screen and (min-width: 1300px) {
+
+    /* HEADER */
+    .definir__jogador {
+
+        max-width: none;
+
+    }
+
+    .header__sistema {
+
+        max-width: none;
+    }
+
+    /* JOGO */
+    .jogo-da-velha {
+
+        & .box {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    .seletor {
+
+        & button {
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px){
+    /* HEADER */
+    .definir__jogador {
+
+        max-width: none;
+
+    }
+
+    .header__sistema {
+
+        max-width: none;
+    }
+
+    /* JOGO */
+    .jogo-da-velha {
+
+        & .box {
+            width: 500px;
+            height: 500px;
+        }
+    }
+
+    .seletor {
+
+        & button {
+            width: 300px;
+        }
+    }
+    
 }
