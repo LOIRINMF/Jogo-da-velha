@@ -7,10 +7,13 @@
 */
 
 // Parametros de verificação
-let testeB = Number(0)
-let testeX = Number(0)
+var testeB = Number(0)
+var testeX = Number(0)
 
-let sistema = document.getElementById("sistem")
+var pontosJ1 = document.querySelector("#p_j1")
+var pontosJ2 = document.querySelector("#p_j2")
+
+var sistema = document.getElementById("sistem")
 
 // funçoes que quando chamadas liberam um parametro(1) de aprovação.
 // PENSEI EM UMA FORMA DE RESUMIR A LILHA 15 A 35 PASANDO UM PARAMETRO PRA FUNCION
@@ -19,6 +22,7 @@ function bola() {
     document.getElementById("bola").disabled = true
     testeB = 1
 
+    sistema.innerHTML = 'Bolinha começa o game'
     // Deixar as div box verde.
     verde()
     // Desabilita visualmente os button.
@@ -30,6 +34,7 @@ function xis() {
     document.querySelector('.btXis').disabled = true
     testeX = 1
 
+    sistema.innerHTML = 'XIS começa o game'
     verde()
     nbutton()
 }
@@ -49,8 +54,7 @@ function verde() {
 
     c1.forEach(element => {
         element.classList.add('certo');
-    }
-    );
+    });
 }
 
 /* função que verifica os parametros. */
@@ -63,23 +67,23 @@ function bolaORxis(a) {
         //Pegando o ID da box e colocando em uma (var)
         const H = document.querySelector('#bOx' + a)
         const L = document.querySelector('#l' + a)
-        let S = ''
+        let xORb = ''
 
         // fazer a separaçao de bola ou xis ||CERTO||
         if (testeB == 1) {
             H.innerHTML = "O"
-            S = 'X'
+            xORb = 'X'
 
             testeB = 0
             testeX = 1
         } else {
             H.innerHTML = "X"
-            S = 'O'
+            xORb = 'O'
 
             testeX = 0
             testeB = 1
         }
-        sistema.innerHTML = 'Vez do jogador de ' + S
+        sistema.innerHTML = 'Vez do jogador de ' + xORb
 
         L.onclick = null;
         jogar(a)
@@ -131,9 +135,17 @@ function jogar(a) {
     let vencedor = verificarVencedor();
 
     if (vencedor !== null) {
+        // Reseta os parametros de verifição.
+        testeB = Number(0)
+        testeX = Number(0)
+
+        let c4 = document.querySelectorAll('.box');
+
+        c4.forEach(element => {
+            element.classList.remove('certo');
+        });
 
         sistema.innerHTML = "Parabens Jogador " + vencedor + " você venceu!";
-
 
         // Lógica para reiniciar o jogo.   
         setTimeout(function () {
@@ -166,10 +178,6 @@ function limp() {
         box.onclick = () => bolaORxis(parseInt(box.id.substr(1)));
     });
 
-    // Reseta os parametros de verifição.
-    testeB = Number(0)
-    testeX = Number(0)
-
     //Devolvendo as cores.
     const denovoX = document.querySelector('.btXis');
     denovoX.classList.remove('desativado');
@@ -177,14 +185,7 @@ function limp() {
     const denovoB = document.querySelector('.btBola');
     denovoB.classList.remove('desativado');
 
-    let c2 = document.querySelectorAll('.box');
-
-    c2.forEach(element => {
-        element.classList.remove('certo');
-    }
-    );
-
-    sistema.innerHTML = ''
+    sistema.innerHTML = 'Escolhar X ou B'
 
     // Libera os botoês para joga denovo.
     document.querySelector('.btXis').disabled = false
@@ -198,15 +199,17 @@ function nome(j) {
 
     if (nick == '') {
 
-    } else if (j === 1 ) {
+    } else if (j === 1) {
         let jogador_1 = document.querySelector('#j1')
 
         jogador_1.innerHTML = nick
+        jogador_1.abbr = 'Outro'
 
     } else {
         let jogador_2 = document.querySelector('#j2')
 
         jogador_2.innerHTML = nick
+        jogador_2.abbr = 'Outro'
 
     }
 }
@@ -216,13 +219,12 @@ document.addEventListener("keydown", function (e) {
     if (e.keyCode === 13) {
         e.preventDefault();
 
-       /* let primeiro_j = document.querySelector('#j1')
-
-        if (primeiro_j.value === 'Jogador 1'){
-            nome(1)
-        } else {
+         let primeiro_j = document.getElementById("j1")
+ 
+         if (primeiro_j.abbr == "Jo_1"){
+             nome(1)
+         } else {
             nome(2)
-        } 
-        */
+         }
     }
 });
