@@ -10,6 +10,8 @@
 var testeB = Number(0)
 var testeX = Number(0)
 
+var primeiro_j = ''
+
 var pontosJ1 = document.querySelector("#p_j1")
 var pontosJ2 = document.querySelector("#p_j2")
 
@@ -21,6 +23,8 @@ function bola() {
     document.querySelector('.btXis').disabled = true
     document.getElementById("bola").disabled = true
     testeB = 1
+    // Definindo qual a esolha do Jogador 1
+    primeiro_j = 'O'
 
     sistema.innerHTML = 'Bolinha começa o game'
     // Deixar as div box verde.
@@ -33,6 +37,7 @@ function xis() {
     document.getElementById("bola").disabled = true
     document.querySelector('.btXis').disabled = true
     testeX = 1
+    primeiro_j = "X"
 
     sistema.innerHTML = 'XIS começa o game'
     verde()
@@ -99,27 +104,27 @@ let tabuleiroV = [
 
 // Verificar ser alguem venceu.
 function verificarVencedor() {
-    // Verificar L
+    // Verificar Linhas (L)
     for (let i = 0; i < 3; i++) {
         if (tabuleiroV[i][0] !== "" && tabuleiroV[i][0] === tabuleiroV[i][1] && tabuleiroV[i][1] === tabuleiroV[i][2]) {
-            return tabuleiroV[i][0];
+            return { simbolo: tabuleiroV[i][0], linha: i };
         }
     }
 
-    // Verificar C
+    // Verificar Colunas (C)
     for (let j = 0; j < 3; j++) {
         if (tabuleiroV[0][j] !== "" && tabuleiroV[0][j] === tabuleiroV[1][j] && tabuleiroV[1][j] === tabuleiroV[2][j]) {
-            return tabuleiroV[0][j];
+            return { simbolo: tabuleiroV[0][j], coluna: j };
         }
     }
 
-    // Verificar D
+    // Verificar Diagonais (D)
     if (tabuleiroV[0][0] !== "" && tabuleiroV[0][0] === tabuleiroV[1][1] && tabuleiroV[1][1] === tabuleiroV[2][2]) {
-        return tabuleiroV[0][0];
+        return { simbolo: tabuleiroV[0][0], diagonal: "principal" };
     }
 
     if (tabuleiroV[0][2] !== "" && tabuleiroV[0][2] === tabuleiroV[1][1] && tabuleiroV[1][1] === tabuleiroV[2][0]) {
-        return tabuleiroV[0][2];
+        return { simbolo: tabuleiroV[0][2], diagonal: "secundaria" };
     }
 
     return null;
@@ -136,8 +141,8 @@ function jogar(a) {
 
     if (vencedor !== null) {
         // Reseta os parametros de verifição.
-        testeB = Number(0)
-        testeX = Number(0)
+        testeB = 0
+        testeX = 0
 
         let c4 = document.querySelectorAll('.box');
 
@@ -145,15 +150,38 @@ function jogar(a) {
             element.classList.remove('certo');
         });
 
-        sistema.innerHTML = "Parabens Jogador " + vencedor + " você venceu!";
+        sistema.innerHTML = `Parabens Jogador ${vencedor.simbolo} você venceu!`;
 
+        
+        // (ANIMAÇÃO DE VENCER) {animacao_v(vencedor)}
         // Lógica para reiniciar o jogo.   
         setTimeout(function () {
+
             limp()
-        }, 3000)
+            addPonto(vencedor.simbolo)
+
+        }, 2800)
 
     }
 }
+
+// Função que vai fazer as animações. ( depois vou ver sobre isso.)
+/*function animacao_v(vencedor) {
+
+    if (vencedor !== null) {
+        console.log(`O vencedor é ${vencedor.simbolo}`);
+    
+        if (vencedor.linha !== undefined) {
+            console.log(`A vitória ocorreu na linha ${vencedor.linha + 1}`);
+        } else if (vencedor.coluna !== undefined) {
+            console.log(`A vitória ocorreu na coluna ${vencedor.coluna + 1}`);
+        } else if (vencedor.diagonal !== undefined) {
+            console.log(`A vitória ocorreu na diagonal ${vencedor.diagonal}`);
+        }
+    } else {
+        console.log("Não há vencedor");
+    }
+}*/
 
 // Ser ouver vencedor apos mostra quem foi, essa função reseta o jogo. (pronto para outra rodada?)
 function limp() {
@@ -197,21 +225,19 @@ function nome(j) {
     let nick_j = document.querySelector('#jogador')
     let nick = nick_j.value.toUpperCase()
 
-    if (nick == '') {
-
-    } else if (j === 1) {
-        let jogador_1 = document.querySelector('#j1')
-
-        jogador_1.innerHTML = nick
-        jogador_1.abbr = 'Outro'
-
-    } else {
-        let jogador_2 = document.querySelector('#j2')
-
-        jogador_2.innerHTML = nick
-        jogador_2.abbr = 'Outro'
-
+        if (nick !== '') {
+        const jogador = document.querySelector(`#j${j}`);
+        jogador.innerHTML = nick;
+        jogador.abbr = 'Outro';
     }
+}
+
+// Função para adicionar pontos na tabela.
+function addPonto(V) {
+    let j_vencedor = (V == primeiro_j) ? true : false;
+    
+        j_vencedor ? pontosJ1.innerHTML = parseInt(pontosJ1.innerHTML) + 1 : pontosJ2.innerHTML = parseInt(pontosJ2.innerHTML) + 1;
+
 }
 
 // Um evendo que observa qual tecla foi apertada IF (ENTER) ele não deixa. {isso quebra o input}
@@ -219,12 +245,12 @@ document.addEventListener("keydown", function (e) {
     if (e.keyCode === 13) {
         e.preventDefault();
 
-         let primeiro_j = document.getElementById("j1")
- 
-         if (primeiro_j.abbr == "Jo_1"){
-             nome(1)
-         } else {
+        let nome_primeiro_j = document.getElementById("j1")
+
+        if (nome_primeiro_j.abbr == "Jo_1") {
+            nome(1)
+        } else {
             nome(2)
-         }
+        }
     }
 });
