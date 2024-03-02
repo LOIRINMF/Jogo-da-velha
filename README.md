@@ -11,7 +11,7 @@ Sistema operacional de 64 bits, processador baseado em x64 (não sei como)
 
    Veja como esta o [JOGO DA VELHA](https://loirinmf.github.io/Jogo-da-velha/public/jogo.html) 
  
-   Para melhor esperiencia ser tive no celular recomendo deixa ele DEITADO.
+   Para melhor esperiencia ser tive no celular recomendo deixa ele em modo PAISAGEM.
    ser tiver em um Pc ou Table deve ficar mais deboas.
 
    Ainda estou aprendendo a mexer com @Media do CSS.
