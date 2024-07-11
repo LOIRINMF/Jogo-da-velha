@@ -88,7 +88,7 @@ function bolaORxis(a) {
             testeX = 0
             testeB = 1
         }
-        sistema.innerHTML = 'Vez do jogador de ' + xORb
+        sistema.innerHTML = 'Vez do jogador com ' + xORb
 
         L.onclick = null;
         jogar(a)
@@ -150,7 +150,7 @@ function jogar(a) {
             element.classList.remove('certo');
         });
 
-        sistema.innerHTML = `Parabens Jogador ${vencedor.simbolo} você venceu!`;
+        sistema.innerHTML = `Parabens Jogador <${vencedor.simbolo}> você venceu!`;
 
         
         // (ANIMAÇÃO DE VENCER) {animacao_v(vencedor)}
