@@ -96,7 +96,7 @@
 }
 
 /* CELULARES EM PAISAGEM */
-@media screen and (min-width: 750px) and (max-width: 920px) {
+@media screen and (min-width: 481px) and (max-width: 920px) {
 
     body {
         background-color: rgb(0, 0, 0);
@@ -197,11 +197,25 @@
     }
 }
 
-/* PC */
-@media screen and (min-width: 921px){
-    
+@media screen and (min-width: 921px) {
+
+    .header__sistema {
+
+        max-width: 250px;
+        max-height: 350px;
+    }
+
+    .jogo-da-velha {
+
+        & .box {
+            width: 130px;
+            height: 130px;
+        }
+    }
 }
-/* TELAS GRANDES (TV) */
+    
+
+/* PC */
 @media screen and (min-width: 1300px) {
 
     /* HEADER */
@@ -213,15 +227,16 @@
 
     .header__sistema {
 
-        max-width: none;
+        max-width: 350px;
+        max-height: 550px;
     }
 
     /* JOGO */
     .jogo-da-velha {
 
         & .box {
-            width: 400px;
-            height: 400px;
+            width: 180px;
+            height: 180px;
         }
     }
 
@@ -233,8 +248,9 @@
     }
 }
 
+/* TV
 @media screen and (min-width: 1500px){
-    /* HEADER */
+    
     .definir__jogador {
 
         max-width: none;
@@ -246,7 +262,7 @@
         max-width: none;
     }
 
-    /* JOGO */
+    
     .jogo-da-velha {
 
         & .box {
@@ -262,4 +278,4 @@
         }
     }
     
-}
+} */

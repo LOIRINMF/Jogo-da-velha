@@ -150,7 +150,7 @@ function jogar(a) {
             element.classList.remove('certo');
         });
 
-        sistema.innerHTML = `Parabens Jogador <${vencedor.simbolo}> você venceu!`;
+        sistema.innerHTML = `Parabens Jogador < ${vencedor.simbolo} > você venceu!`;
 
         
         // (ANIMAÇÃO DE VENCER) {animacao_v(vencedor)}

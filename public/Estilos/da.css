@@ -151,7 +151,7 @@ span {
 label::after {
     position: absolute;
     /*Aqui eu vejo depois*/
-    content: "= 100% Jesus =";
+    content: "= Nick name =";
 
     left: 3px;
 
