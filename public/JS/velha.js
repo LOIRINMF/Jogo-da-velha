@@ -213,7 +213,7 @@ function limp() {
     const denovoB = document.querySelector('.btBola');
     denovoB.classList.remove('desativado');
 
-    sistema.innerHTML = 'Escolhar X ou B'
+    sistema.innerHTML = 'Escolhar X ou O'
 
     // Libera os botoês para joga denovo.
     document.querySelector('.btXis').disabled = false
